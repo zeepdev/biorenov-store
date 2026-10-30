@@ -1,53 +1,47 @@
 import React from "react";
-import { Package, RotateCcw, Lock, Headphones } from "lucide-react";
+import { Leaf, FlaskConical, Heart, Globe } from "lucide-react";
 
 export function TrustBar() {
   const items = [
     {
-      icon: Package,
-      title: "Frete Grátis",
-      desc: "Em compras acima de R$ 199 para todo o Brasil",
+      icon: Leaf,
+      title: "Ingredientes Limpos",
+      desc: "Seguros & livres de toxinas",
     },
     {
-      icon: RotateCcw,
-      title: "Garantia de 30 Dias",
-      desc: "Resultados perceptíveis ou reembolso total",
+      icon: FlaskConical,
+      title: "Clinicamente Comprovado",
+      desc: "Testado dermatologicamente",
     },
     {
-      icon: Lock,
-      title: "Pagamento Seguro",
-      desc: "Pix com 5% de desconto ou até 12x no cartão",
+      icon: Heart,
+      title: "Cruelty-Free",
+      desc: "Nunca testado em animais",
     },
     {
-      icon: Headphones,
-      title: "Atendimento Consultivo",
-      desc: "Suporte com especialistas via WhatsApp",
+      icon: Globe,
+      title: "Beleza Consciente",
+      desc: "Bom para você e para o planeta",
     },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8 relative z-20">
-      {/* Floating White Card (Verdora Style) */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-[#e8e4db]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#f0ece3]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+      {/* Floating White Card (Exact Velvetique Style) */}
+      <div className="bg-white rounded-xl py-6 px-6 sm:px-10 shadow-sm border border-stone-200">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-center">
           {items.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div
-                key={idx}
-                className={`flex items-center gap-4 ${
-                  idx !== 0 ? "pt-4 sm:pt-0 sm:pl-6" : ""
-                }`}
-              >
-                {/* Soft circular icon backdrop */}
-                <div className="w-12 h-12 rounded-full bg-[#f3f5f2] flex items-center justify-center flex-shrink-0 text-[#2d4734]">
+              <div key={idx} className="flex items-center gap-3.5">
+                <div className="w-10 h-10 rounded-full bg-[#faf2f4] flex items-center justify-center flex-shrink-0 text-[#b4536a]">
                   <Icon className="w-5 h-5 stroke-[1.6]" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-[#1e2420] tracking-tight">
+                  <h4 className="text-xs sm:text-sm font-semibold text-stone-900 tracking-tight">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-[#5f6761] mt-0.5 leading-snug">
+                  <p className="text-[11px] sm:text-xs text-stone-500 mt-0.5 leading-snug">
                     {item.desc}
                   </p>
                 </div>

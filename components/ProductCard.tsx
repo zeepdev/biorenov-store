@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Product } from "@/data/products";
 import { useCart } from "@/lib/cart-context";
-import { Heart, ShoppingBag, Check, MessageCircle, Star } from "lucide-react";
+import { Heart, Star, Check } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -20,122 +20,80 @@ export function ProductCard({ product }: ProductCardProps) {
     setTimeout(() => setAdded(false), 1400);
   };
 
-  const pixPrice = product.price * 0.95;
-  const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(
-    product.whatsappMessage
-  )}`;
-
   return (
-    <div className="group flex flex-col bg-transparent">
-      {/* Image Container (Verdora & Lunara Style) */}
-      <div className="relative aspect-[4/5] w-full rounded-2xl bg-[#efece4] overflow-hidden flex items-center justify-center p-6 border border-[#e8e4db] group-hover:border-[#dcd6c9] transition-colors">
-        
-        {/* Minimalist Badge (Lunara Style: "NEW" / "BEST SELLER") */}
-        {product.badge && (
-          <span className="absolute top-3.5 left-3.5 z-10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/95 text-[#1e2420] shadow-xs backdrop-blur-xs">
-            {product.badge}
-          </span>
-        )}
+    <div className="group bg-white border border-stone-200 rounded-lg p-5 flex flex-col items-center text-center relative hover:shadow-lg transition-all duration-300">
+      
+      {/* Favorite Heart Icon (Velvetique style - top right) */}
+      <button
+        onClick={() => setIsFavorite(!isFavorite)}
+        className="absolute top-4 right-4 z-10 p-1.5 text-stone-400 hover:text-[#b4536a] transition-colors cursor-pointer"
+        aria-label="Favoritar produto"
+      >
+        <Heart
+          className={`w-4 h-4 transition-colors ${
+            isFavorite ? "fill-[#b4536a] text-[#b4536a]" : "text-stone-400"
+          }`}
+        />
+      </button>
 
-        {/* Favorite Heart Icon (Verdora & Velvetique Style) */}
-        <button
-          onClick={() => setIsFavorite(!isFavorite)}
-          className="absolute top-3.5 right-3.5 z-10 p-2 rounded-full bg-white/80 hover:bg-white text-stone-600 transition-colors shadow-xs"
-          aria-label="Favoritar produto"
-        >
-          <Heart
-            className={`w-4 h-4 transition-colors ${
-              isFavorite ? "fill-[#8d5b3a] text-[#8d5b3a]" : "text-stone-500"
-            }`}
-          />
-        </button>
-
-        {/* Real Product Image */}
+      {/* Product Image (Centered with light background) */}
+      <div className="relative aspect-square w-full max-w-[210px] overflow-hidden flex items-center justify-center p-3 mb-4">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+          className="max-h-48 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
         />
-
-        {/* Quick Add Overlay on Hover */}
-        <button
-          onClick={handleAdd}
-          className="absolute bottom-3 left-3 right-3 py-3 rounded-xl bg-[#1e3324] hover:bg-[#132218] text-white text-xs font-medium tracking-wide flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md translate-y-2 group-hover:translate-y-0"
-        >
-          {added ? (
-            <>
-              <Check className="w-4 h-4 text-emerald-400" />
-              <span>Adicionado à Sacola</span>
-            </>
-          ) : (
-            <>
-              <ShoppingBag className="w-4 h-4" />
-              <span>Adicionar à Sacola</span>
-            </>
-          )}
-        </button>
       </div>
 
-      {/* Product Details (Lunara Style - Clean & Editorial) */}
-      <div className="pt-4 flex flex-col flex-1">
-        {/* Category / Subtitle */}
-        <div className="flex items-center justify-between text-[11px] text-[#717a73] tracking-wide mb-1">
-          <span className="uppercase font-medium">{product.volume}</span>
-          <div className="flex items-center gap-1 text-[#8d5b3a]">
-            <Star className="w-3 h-3 fill-current" />
-            <span className="font-semibold text-stone-700">{product.rating}</span>
-          </div>
-        </div>
+      {/* Product Title */}
+      <h3 className="font-sans text-xs sm:text-sm font-semibold text-stone-900 group-hover:text-[#b4536a] transition-colors line-clamp-2 min-h-[38px] leading-snug">
+        {product.name}
+      </h3>
 
-        {/* Title in Editorial Serif */}
-        <h3 className="font-serif text-xl text-[#1e2420] group-hover:text-[#2d4734] transition-colors leading-snug font-normal">
-          {product.name}
-        </h3>
-
-        {/* Short Subtitle */}
-        <p className="text-xs text-[#5f6761] line-clamp-1 mt-0.5 mb-2">
-          {product.subtitle}
-        </p>
-
-        {/* Price Section */}
-        <div className="mt-auto pt-2 flex items-baseline justify-between">
-          <div className="flex items-baseline gap-2">
-            <span className="text-base font-semibold text-[#1e2420]">
-              R$ {product.price.toFixed(2).replace(".", ",")}
-            </span>
-            {product.originalPrice && (
-              <span className="text-xs text-stone-400 line-through">
-                R$ {product.originalPrice.toFixed(2).replace(".", ",")}
-              </span>
-            )}
-          </div>
-          
-          <span className="text-[11px] text-[#2d4734] font-medium">
-            R$ {pixPrice.toFixed(2).replace(".", ",")} no Pix
+      {/* Price */}
+      <div className="mt-1 mb-2 flex items-center gap-2">
+        {product.originalPrice && (
+          <span className="text-xs text-stone-400 line-through">
+            R$ {product.originalPrice.toFixed(0)}
           </span>
-        </div>
-
-        {/* Mobile Action Button (visible on mobile where hover doesn't exist) */}
-        <div className="pt-3 grid grid-cols-2 gap-2 sm:hidden">
-          <button
-            onClick={handleAdd}
-            className="py-2.5 rounded-lg bg-[#1e3324] text-white text-xs font-medium flex items-center justify-center gap-1.5"
-          >
-            <ShoppingBag className="w-3.5 h-3.5" />
-            <span>Comprar</span>
-          </button>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-2.5 rounded-lg bg-[#f0ece3] text-[#1e2420] text-xs font-medium flex items-center justify-center gap-1.5"
-          >
-            <MessageCircle className="w-3.5 h-3.5 text-[#2d4734]" />
-            <span>WhatsApp</span>
-          </a>
-        </div>
+        )}
+        <span className="text-sm sm:text-base font-bold text-[#b4536a]">
+          R$ {product.price.toFixed(2).replace(".", ",")}
+        </span>
       </div>
+
+      {/* Star Ratings (Velvetique style: 5 stars + review count) */}
+      <div className="flex items-center gap-1.5 mb-4">
+        <div className="flex text-amber-500">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-3 h-3 fill-current" />
+          ))}
+        </div>
+        <span className="text-[11px] text-stone-500 font-medium">
+          ({product.reviewsCount})
+        </span>
+      </div>
+
+      {/* Velvetique Style "ADD TO CART" Button */}
+      <button
+        onClick={handleAdd}
+        className={`w-full py-2.5 rounded-md text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5 ${
+          added
+            ? "bg-emerald-700 text-white"
+            : "bg-[#b4536a] hover:bg-[#9c4357] text-white shadow-2xs"
+        }`}
+      >
+        {added ? (
+          <>
+            <Check className="w-4 h-4" />
+            <span>Adicionado!</span>
+          </>
+        ) : (
+          <span>Adicionar à Sacola</span>
+        )}
+      </button>
+
     </div>
   );
 }
