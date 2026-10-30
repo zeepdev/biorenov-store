@@ -3,157 +3,103 @@
 import React from "react";
 import { useCart } from "@/lib/cart-context";
 import { PRODUCTS } from "@/data/products";
-import { Sparkles, CheckCircle2, ShieldCheck, Sun, Moon, ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export function BioluminiDeepDive() {
   const { addItem } = useCart();
-  const biolumini = PRODUCTS.find((p) => p.id === "biolumini-uniformizador") || PRODUCTS[0];
+  const biolumini =
+    PRODUCTS.find((p) => p.id === "biolumini-uniformizador") || PRODUCTS[0];
 
   return (
-    <section id="biolumini" className="py-16 md:py-24 bg-[#f0eee9] border-b border-[#e6e2d8]">
+    <section id="biolumini" className="py-16 sm:py-24 bg-[#efece4]/60 border-y border-[#e8e4db]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Visual Showcase */}
-          <div className="lg:col-span-6 space-y-4">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-[#e6e2d8]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: Natural, Human Editorial Photography (Lunara Style) */}
+          <div className="lg:col-span-6 relative">
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-[#e8e4db] bg-[#f7f5f0]">
               <img
-                src={biolumini.image}
-                alt="Biolumini Probiótico - Creme Uniformizador"
-                className="w-full h-[460px] object-cover"
+                src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1000&q=80"
+                alt="Aplicação sensorial Biolumini Probiótico"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute top-4 left-4">
-                <span className="px-3.5 py-1.5 rounded-full bg-[#183324] text-white text-[11px] font-bold uppercase tracking-wider shadow">
-                  Hero Dermocosmético
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 text-xs text-[#1e2420]">
+                <span className="font-serif font-semibold text-sm block mb-0.5">
+                  Fórmula Biotecnológica Probiótica
+                </span>
+                <span className="text-[#5f6761]">
+                  Clareamento seguro sem descamação severa e sem efeito rebote.
                 </span>
               </div>
-              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#f9f8f5]/95 backdrop-blur-md border border-[#e6e2d8]">
-                <div className="flex items-center justify-between text-xs text-[#183324] font-semibold">
-                  <span>Textura: Fluida & Aveludada</span>
-                  <span className="text-[#8d5b3a]">Absorção em 30 segundos</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Application routine cards */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 bg-white rounded-2xl border border-[#e6e2d8] flex items-start gap-3">
-                <Sun className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs font-bold text-stone-900 uppercase">Manhã</h4>
-                  <p className="text-[11px] text-stone-600 mt-0.5">
-                    Aplicar após a água micelar e finalizar sempre com o Bio Sun Care.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 bg-white rounded-2xl border border-[#e6e2d8] flex items-start gap-3">
-                <Moon className="w-5 h-5 text-indigo-700 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs font-bold text-stone-900 uppercase">Noite</h4>
-                  <p className="text-[11px] text-stone-600 mt-0.5">
-                    Aplicar na pele limpa para ação reparadora noturna e regeneração profunda.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* Clinical & Scientific Details */}
+          {/* Right Column: Editorial Copy (Lunara "The Double Cleanse" Style) */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#8d5b3a] font-bold">
-              <Sparkles className="w-3.5 h-3.5 text-[#8d5b3a]" />
-              Inovação no Controle de Hiperpigmentação
+            <div className="text-xs uppercase tracking-widest text-[#8d5b3a] font-semibold">
+              O Protocolo em Destaque
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#183324] font-normal leading-tight">
-              Biolumini: O fim do efeito rebote no tratamento do melasma.
+            <h2 className="font-serif text-4xl sm:text-5xl text-[#1e2420] font-normal leading-[1.15] tracking-tight">
+              Clareamento inteligente. <br />
+              <span className="italic font-serif font-light text-[#2d4734]">
+                Sem efeito rebote.
+              </span>
             </h2>
 
-            <p className="text-stone-700 text-sm leading-relaxed">
-              O maior erro nos tratamentos tradicionais de manchas é a agressão química
-              (ácidos agressivos e hidroquinona) que inflama a pele. Quando a inflamação cessa,
-              os melanócitos produzem ainda mais pigmento — gerando o efeito rebote.
+            <p className="text-[#4a524c] text-sm sm:text-base leading-relaxed">
+              O maior erro nos tratamentos tradicionais de melasma é agredir a pele com
+              ácidos severos que provocam inflamação. Quando a barreira se rompe, os melanócitos
+              produzem ainda mais pigmento — o temido efeito rebote.
             </p>
 
-            <p className="text-stone-700 text-sm leading-relaxed">
-              O <strong>Biolumini</strong> atua de forma biológica inteligente: os probióticos
-              silenciam os mensageiros inflamatórios enquanto fitoativos seguros desaceleram a
-              produção excessiva de melanina, restaurando a luminosidade uniforme e a densidade da pele.
+            <p className="text-[#4a524c] text-sm sm:text-base leading-relaxed">
+              O <strong>Biolumini</strong> age por biocompatibilidade celular: seus biofermentos
+              probióticos silenciam os mensageiros inflamatórios e equilibram a flora cutânea,
+              enquanto bioativos botânicos uniformizam o tom de forma suave, segura e contínua.
             </p>
 
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#587d65] flex-shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-xs text-stone-900 block font-bold">
-                    Fortalecimento da Barreira Lipídica
-                  </strong>
-                  <span className="text-xs text-stone-600">
-                    Aumenta a resistência cutânea contra a luz azul de telas e calor ambiente.
-                  </span>
-                </div>
+            {/* Key benefits list */}
+            <div className="space-y-3 pt-2 text-xs sm:text-sm text-[#38413b]">
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-[#2d4734] flex-shrink-0" />
+                <span>Compatível com peles sensíveis e áreas de atrito (rosto, axilas e virilhas)</span>
               </div>
-
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#587d65] flex-shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-xs text-stone-900 block font-bold">
-                    Uniformização Gradual e Duradoura
-                  </strong>
-                  <span className="text-xs text-stone-600">
-                    Clareamento suave sem vermelhidão, descamação severa ou fotossensibilidade extrema.
-                  </span>
-                </div>
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-[#2d4734] flex-shrink-0" />
+                <span>Textura aveludada com rápida absorção (toque seco em 30 segundos)</span>
               </div>
-
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#587d65] flex-shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-xs text-stone-900 block font-bold">
-                    Uso Facial e Corporal
-                  </strong>
-                  <span className="text-xs text-stone-600">
-                    Seguro também para áreas de atrito como axilas, virilhas, colo e mãos.
-                  </span>
-                </div>
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-[#2d4734] flex-shrink-0" />
+                <span>Rende 60 dias de aplicação diária com economia real no Pix</span>
               </div>
             </div>
 
-            {/* Price & Immediate Purchase */}
-            <div className="p-6 bg-white rounded-3xl border border-[#e6e2d8] space-y-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-xs text-stone-400 line-through">De R$ 229,00</span>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-[#183324]">R$ 189,90</span>
-                    <span className="text-xs text-emerald-800 font-semibold">
-                      (R$ 180,40 no Pix)
-                    </span>
-                  </div>
-                </div>
-                <span className="text-xs text-stone-500 font-medium">Frasco 50g • Rende 60 dias</span>
-              </div>
+            {/* Actions */}
+            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <button
+                onClick={() => addItem(biolumini)}
+                className="px-8 py-4 rounded-full bg-[#1e3324] hover:bg-[#132218] text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-sm"
+              >
+                <span>Garantir Meu Biolumini • R$ 189,90</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <button
-                  onClick={() => addItem(biolumini)}
-                  className="py-3 px-5 rounded-xl bg-[#183324] hover:bg-[#12261b] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-sm"
-                >
-                  <span>Garantir Meu Biolumini</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-
-                <a
-                  href={`https://wa.me/5511999999999?text=${encodeURIComponent(biolumini.whatsappMessage)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3 px-5 rounded-xl bg-[#f9f8f5] hover:bg-[#f0eee9] border border-[#d8d3c7] text-[#183324] font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#587d65]" />
-                  <span>Dúvidas no WhatsApp</span>
-                </a>
-              </div>
+              <a
+                href={`https://wa.me/5511999999999?text=${encodeURIComponent(
+                  biolumini.whatsappMessage
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-4 rounded-full bg-white hover:bg-stone-50 border border-[#dcd6c9] text-[#1e2420] text-xs font-semibold uppercase tracking-wider text-center transition-colors"
+              >
+                Tirar Dúvidas com Consultor
+              </a>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>

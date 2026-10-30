@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Product } from "@/data/products";
 import { useCart } from "@/lib/cart-context";
-import { Star, Check, ShoppingBag, MessageCircle, Zap } from "lucide-react";
+import { Heart, ShoppingBag, Check, MessageCircle, Star } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -12,6 +12,7 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const handleAdd = () => {
     addItem(product);
@@ -25,124 +26,113 @@ export function ProductCard({ product }: ProductCardProps) {
   )}`;
 
   return (
-    <div className="group relative flex flex-col bg-white rounded-3xl border border-[#e6e2d8] overflow-hidden hover:shadow-xl transition-all duration-300">
-      {/* Badges */}
-      <div className="absolute top-4 left-4 z-10 flex flex-col gap-1.5 items-start">
+    <div className="group flex flex-col bg-transparent">
+      {/* Image Container (Verdora & Lunara Style) */}
+      <div className="relative aspect-[4/5] w-full rounded-2xl bg-[#efece4] overflow-hidden flex items-center justify-center p-6 border border-[#e8e4db] group-hover:border-[#dcd6c9] transition-colors">
+        
+        {/* Minimalist Badge (Lunara Style: "NEW" / "BEST SELLER") */}
         {product.badge && (
-          <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#183324] text-[#f9f8f5] shadow-sm">
+          <span className="absolute top-3.5 left-3.5 z-10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/95 text-[#1e2420] shadow-xs backdrop-blur-xs">
             {product.badge}
           </span>
         )}
-        {product.originalPrice && (
-          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#8d5b3a] text-white">
-            ECONOMIZE R$ {(product.originalPrice - product.price).toFixed(0)}
-          </span>
-        )}
-      </div>
 
-      {/* Image container */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f0eee9]">
+        {/* Favorite Heart Icon (Verdora & Velvetique Style) */}
+        <button
+          onClick={() => setIsFavorite(!isFavorite)}
+          className="absolute top-3.5 right-3.5 z-10 p-2 rounded-full bg-white/80 hover:bg-white text-stone-600 transition-colors shadow-xs"
+          aria-label="Favoritar produto"
+        >
+          <Heart
+            className={`w-4 h-4 transition-colors ${
+              isFavorite ? "fill-[#8d5b3a] text-[#8d5b3a]" : "text-stone-500"
+            }`}
+          />
+        </button>
+
+        {/* Real Product Image */}
         <img
           src={product.image}
           alt={product.name}
-          className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
-        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-semibold text-[#183324] border border-[#e6e2d8]">
-          {product.volume}
-        </div>
+
+        {/* Quick Add Overlay on Hover */}
+        <button
+          onClick={handleAdd}
+          className="absolute bottom-3 left-3 right-3 py-3 rounded-xl bg-[#1e3324] hover:bg-[#132218] text-white text-xs font-medium tracking-wide flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md translate-y-2 group-hover:translate-y-0"
+        >
+          {added ? (
+            <>
+              <Check className="w-4 h-4 text-emerald-400" />
+              <span>Adicionado à Sacola</span>
+            </>
+          ) : (
+            <>
+              <ShoppingBag className="w-4 h-4" />
+              <span>Adicionar à Sacola</span>
+            </>
+          )}
+        </button>
       </div>
 
-      {/* Card Content */}
-      <div className="flex flex-col flex-1 p-6">
-        {/* Rating */}
-        <div className="flex items-center gap-1.5 mb-2">
-          <div className="flex text-amber-600">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-3.5 h-3.5 fill-current" />
-            ))}
+      {/* Product Details (Lunara Style - Clean & Editorial) */}
+      <div className="pt-4 flex flex-col flex-1">
+        {/* Category / Subtitle */}
+        <div className="flex items-center justify-between text-[11px] text-[#717a73] tracking-wide mb-1">
+          <span className="uppercase font-medium">{product.volume}</span>
+          <div className="flex items-center gap-1 text-[#8d5b3a]">
+            <Star className="w-3 h-3 fill-current" />
+            <span className="font-semibold text-stone-700">{product.rating}</span>
           </div>
-          <span className="text-xs font-semibold text-stone-900">{product.rating}</span>
-          <span className="text-xs text-stone-400">({product.reviewsCount})</span>
         </div>
 
-        {/* Title */}
-        <h3 className="font-serif text-xl font-bold text-[#183324] group-hover:text-[#8d5b3a] transition-colors leading-snug">
+        {/* Title in Editorial Serif */}
+        <h3 className="font-serif text-xl text-[#1e2420] group-hover:text-[#2d4734] transition-colors leading-snug font-normal">
           {product.name}
         </h3>
 
-        {/* Subtitle / Indication */}
-        <p className="text-xs text-[#8d5b3a] font-medium mt-1 mb-2 line-clamp-1">
+        {/* Short Subtitle */}
+        <p className="text-xs text-[#5f6761] line-clamp-1 mt-0.5 mb-2">
           {product.subtitle}
         </p>
 
-        {/* Description snippet */}
-        <p className="text-xs text-stone-600 line-clamp-2 leading-relaxed mb-3">
-          {product.description}
-        </p>
-
-        {/* Active Ingredients Tags */}
-        <div className="flex flex-wrap gap-1 mb-4">
-          {product.activeIngredients.slice(0, 3).map((act, i) => (
-            <span
-              key={i}
-              className="text-[10px] px-2 py-0.5 rounded-md bg-[#f9f8f5] text-stone-600 border border-[#e6e2d8]"
-            >
-              {act}
+        {/* Price Section */}
+        <div className="mt-auto pt-2 flex items-baseline justify-between">
+          <div className="flex items-baseline gap-2">
+            <span className="text-base font-semibold text-[#1e2420]">
+              R$ {product.price.toFixed(2).replace(".", ",")}
             </span>
-          ))}
+            {product.originalPrice && (
+              <span className="text-xs text-stone-400 line-through">
+                R$ {product.originalPrice.toFixed(2).replace(".", ",")}
+              </span>
+            )}
+          </div>
+          
+          <span className="text-[11px] text-[#2d4734] font-medium">
+            R$ {pixPrice.toFixed(2).replace(".", ",")} no Pix
+          </span>
         </div>
 
-        {/* Price & Dual CTA Section */}
-        <div className="mt-auto pt-4 border-t border-stone-100 flex flex-col gap-3">
-          <div>
-            <div className="flex items-baseline gap-2">
-              {product.originalPrice && (
-                <span className="text-xs text-stone-400 line-through">
-                  R$ {product.originalPrice.toFixed(2).replace(".", ",")}
-                </span>
-              )}
-              <span className="text-2xl font-bold text-[#183324]">
-                R$ {product.price.toFixed(2).replace(".", ",")}
-              </span>
-            </div>
-            <div className="flex items-center gap-1 text-[11px] font-semibold text-emerald-800 mt-0.5">
-              <Zap className="w-3 h-3 text-emerald-700 fill-current" />
-              <span>R$ {pixPrice.toFixed(2).replace(".", ",")} no Pix (5% OFF)</span>
-            </div>
-          </div>
-
-          {/* D2C Action: Direct Cart Add */}
+        {/* Mobile Action Button (visible on mobile where hover doesn't exist) */}
+        <div className="pt-3 grid grid-cols-2 gap-2 sm:hidden">
           <button
             onClick={handleAdd}
-            className={`w-full py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${
-              added
-                ? "bg-emerald-700 text-white"
-                : "bg-[#183324] text-[#f9f8f5] hover:bg-[#12261b] shadow-sm hover:shadow"
-            }`}
+            className="py-2.5 rounded-lg bg-[#1e3324] text-white text-xs font-medium flex items-center justify-center gap-1.5"
           >
-            {added ? (
-              <>
-                <Check className="w-4 h-4" />
-                Adicionado à Sacola!
-              </>
-            ) : (
-              <>
-                <ShoppingBag className="w-4 h-4" />
-                Comprar no Site
-              </>
-            )}
+            <ShoppingBag className="w-3.5 h-3.5" />
+            <span>Comprar</span>
           </button>
-
-          {/* WhatsApp Concierge Action */}
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-stone-700 bg-[#f9f8f5] hover:bg-[#f0eee9] border border-[#e6e2d8] flex items-center justify-center gap-1.5 transition-colors"
+            className="py-2.5 rounded-lg bg-[#f0ece3] text-[#1e2420] text-xs font-medium flex items-center justify-center gap-1.5"
           >
-            <MessageCircle className="w-3.5 h-3.5 text-[#587d65]" />
-            <span>Pedir via WhatsApp</span>
+            <MessageCircle className="w-3.5 h-3.5 text-[#2d4734]" />
+            <span>WhatsApp</span>
           </a>
         </div>
       </div>

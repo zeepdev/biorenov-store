@@ -1,103 +1,86 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, MessageCircle, ShieldCheck, Sparkles, Leaf, Dna } from "lucide-react";
+import { ArrowRight, Leaf, Heart, Award } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-10 pb-16 md:pt-16 md:pb-24 border-b border-[#e6e2d8] bg-[#f9f8f5]">
+    <section className="relative overflow-hidden pt-8 pb-16 md:pt-14 md:pb-24 bg-[#f7f5f0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Core Positioning Copy */}
+          
+          {/* Left Column: Editorial Headline & Copy (Inspired by Verdora & Lunara) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f0eee9] border border-[#dcd7cb] text-[#183324] text-xs font-semibold tracking-wider uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-[#8d5b3a]" />
-              BIOTECNOLOGIA BOTÂNICA & MICROBIOTA
-            </div>
-
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#183324] leading-[1.12] tracking-tight font-normal">
-              A ciência probiótica que o seu corpo e cabelo{" "}
-              <span className="italic font-serif font-light text-[#8d5b3a]">
-                reconhecem.
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-[72px] text-[#1e2420] leading-[1.08] tracking-[-0.02em] font-normal">
+              Escolhas conscientes. <br />
+              <span className="italic font-serif font-light text-[#2d4734]">
+                Pele que respira.
               </span>
             </h1>
 
-            <p className="text-stone-700 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
-              Cuidados avançados formulados pelo cosmetólogo <strong>Douglas Alan</strong> para restaurar
-              a barreira natural da sua pele e fios com ativos vivos da natureza,
-              respeitando profundamente a microbiota humana.
+            <p className="text-[#4a524c] text-base sm:text-lg max-w-lg font-normal leading-relaxed">
+              Fórmulas botânicas limpas e biotecnologia probiótica desenvolvidas pelo cosmetólogo 
+              <strong> Douglas Alan</strong> para restaurar a barreira biológica natural da sua pele e fios.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            {/* Main Action Button */}
+            <div className="pt-2">
               <a
                 href="#produtos"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#183324] text-[#f9f8f5] font-semibold hover:bg-[#12261b] shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider group"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#1e3324] text-[#f7f5f0] text-sm font-medium hover:bg-[#132218] transition-all group shadow-sm"
               >
-                <span>Conhecer Produtos</span>
+                <span>Conhecer a Coleção</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-
-              <a
-                href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20comprar%20produtos%20Biorenov%20diretamente%20pelo%20WhatsApp."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white border border-[#d8d3c7] text-[#183324] font-semibold hover:bg-[#f0eee9] transition-colors text-xs uppercase tracking-wider"
-              >
-                <MessageCircle className="w-4 h-4 text-[#587d65]" />
-                <span>Compre via WhatsApp</span>
               </a>
             </div>
 
-            {/* Scientific Badges */}
-            <div className="pt-6 border-t border-[#e6e2d8] grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-stone-700">
+            {/* Clean Minimalist Badges (Exact Verdora Style) */}
+            <div className="pt-8 border-t border-[#e8e4db] flex flex-wrap items-center gap-6 sm:gap-10 text-xs text-[#4a524c]">
               <div className="flex items-center gap-2">
-                <Dna className="w-4 h-4 text-[#183324] flex-shrink-0" />
-                <span>Equilíbrio da Microbiota</span>
+                <Leaf className="w-4 h-4 text-[#2d4734]" />
+                <span>Fórmulas Limpas</span>
               </div>
               <div className="flex items-center gap-2">
-                <Leaf className="w-4 h-4 text-[#183324] flex-shrink-0" />
+                <Heart className="w-4 h-4 text-[#2d4734]" />
                 <span>100% Vegano & Cruelty-Free</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#183324] flex-shrink-0" />
-                <span>0% Formol, Parabenos & Petrolatos</span>
+                <Award className="w-4 h-4 text-[#2d4734]" />
+                <span>Biotecnologia Probiótica</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Hero Visual Benchmark (Aesop / Biossance Clean Aesthetic) */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+          {/* Right Column: Organic Pebble Shape & Real Product (Verdora Style) */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[420px] aspect-[4/5] flex items-center justify-center">
+              
+              {/* Organic Curved Wave / Pebble Background (Verdora Style) */}
+              <div className="absolute inset-0 bg-[#e7ebe4] rounded-[60px] md:rounded-[80px] -rotate-1 transition-transform" />
+              <div className="absolute inset-4 bg-[#f0eee8] rounded-[50px] md:rounded-[70px] rotate-1" />
+
+              {/* Real Product Image (Crisp & Clean) */}
+              <div className="relative z-10 w-full h-full p-8 flex items-center justify-center">
                 <img
-                  src="https://images.unsplash.com/photo-1608248597359-00977821c97a?auto=format&fit=crop&w=1000&q=80"
-                  alt="Biorenov Botanic Beauty - Tratamentos Probióticos"
-                  className="w-full h-[470px] object-cover"
+                  src="/produtos/dorless_render_1.png"
+                  alt="Biorenov Dorless Relaxante Muscular"
+                  className="max-h-[380px] w-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
                 />
+              </div>
 
-                {/* Overlaid Botanical Card */}
-                <div className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-[#f9f8f5]/95 backdrop-blur-md border border-[#e6e2d8] shadow-lg">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest text-[#8d5b3a] font-bold">
-                        Formulação do Cosmetólogo
-                      </p>
-                      <p className="font-serif text-base font-bold text-[#183324]">
-                        Biolumini & Fator de Crescimento
-                      </p>
-                    </div>
-                    <span className="px-3 py-1 bg-[#183324] text-white rounded-full text-[11px] font-semibold tracking-wide">
-                      Bioativos
-                    </span>
-                  </div>
-                  <p className="text-stone-600 text-xs mt-2 line-clamp-2">
-                    Cosméticos vivos formulados para restaurar o manto biológico cutâneo e capilar.
-                  </p>
-                </div>
+              {/* Circular Stamp Badge (Exact Verdora "Thoughtful by Nature" circular badge) */}
+              <div className="absolute top-4 right-2 z-20 w-24 h-24 rounded-full bg-[#8d5b3a] text-[#f7f5f0] p-2 flex flex-col items-center justify-center text-center shadow-md rotate-12">
+                <Leaf className="w-4 h-4 mb-0.5 text-[#f7f5f0]/90" />
+                <span className="text-[9px] uppercase font-bold tracking-wider leading-tight">
+                  Douglas Alan
+                </span>
+                <span className="text-[8px] opacity-80 uppercase tracking-widest mt-0.5">
+                  Cosmetologia
+                </span>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -1,47 +1,54 @@
 import React from "react";
-import { Leaf, Dna, ShieldAlert, Award } from "lucide-react";
+import { Package, RotateCcw, Lock, Headphones } from "lucide-react";
 
 export function TrustBar() {
-  const badges = [
+  const items = [
     {
-      icon: Leaf,
-      title: "100% Vegano & Cruelty-Free",
-      desc: "Nenhum teste em animais ou derivado animal",
+      icon: Package,
+      title: "Frete Grátis",
+      desc: "Em compras acima de R$ 199 para todo o Brasil",
     },
     {
-      icon: Dna,
-      title: "Equilíbrio da Microbiota",
-      desc: "Nutre e respeita as bactérias benéficas da pele",
+      icon: RotateCcw,
+      title: "Garantia de 30 Dias",
+      desc: "Resultados perceptíveis ou reembolso total",
     },
     {
-      icon: ShieldAlert,
-      title: "0% Parabenos & Petrolatos",
-      desc: "Fórmula limpa, sem silicones pesados ou formol",
+      icon: Lock,
+      title: "Pagamento Seguro",
+      desc: "Pix com 5% de desconto ou até 12x no cartão",
     },
     {
-      icon: Award,
-      title: "Cosmetologia Douglas Alan",
-      desc: "Desenvolvido com rigor e embasamento científico",
+      icon: Headphones,
+      title: "Atendimento Consultivo",
+      desc: "Suporte com especialistas via WhatsApp",
     },
   ];
 
   return (
-    <div className="bg-[#f0eee9] border-b border-[#e6e2d8] py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {badges.map((b, i) => {
-            const Icon = b.icon;
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8 relative z-20">
+      {/* Floating White Card (Verdora Style) */}
+      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-[#e8e4db]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#f0ece3]">
+          {items.map((item, idx) => {
+            const Icon = item.icon;
             return (
-              <div key={i} className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm border border-[#e6e2d8]">
-                  <Icon className="w-5 h-5 text-[#183324]" />
+              <div
+                key={idx}
+                className={`flex items-center gap-4 ${
+                  idx !== 0 ? "pt-4 sm:pt-0 sm:pl-6" : ""
+                }`}
+              >
+                {/* Soft circular icon backdrop */}
+                <div className="w-12 h-12 rounded-full bg-[#f3f5f2] flex items-center justify-center flex-shrink-0 text-[#2d4734]">
+                  <Icon className="w-5 h-5 stroke-[1.6]" />
                 </div>
                 <div>
-                  <h4 className="text-xs uppercase tracking-wider font-bold text-[#183324]">
-                    {b.title}
+                  <h4 className="text-sm font-semibold text-[#1e2420] tracking-tight">
+                    {item.title}
                   </h4>
-                  <p className="text-xs text-stone-600 mt-0.5 leading-snug">
-                    {b.desc}
+                  <p className="text-xs text-[#5f6761] mt-0.5 leading-snug">
+                    {item.desc}
                   </p>
                 </div>
               </div>
