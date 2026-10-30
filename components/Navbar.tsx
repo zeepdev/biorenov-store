@@ -92,11 +92,8 @@ export function Navbar() {
               <a href="#douglas-alan" className="hover:text-[#b4536a] transition-colors">
                 Sobre Nós
               </a>
-              <a href="#biolumini" className="hover:text-[#b4536a] transition-colors">
-                Biolumini
-              </a>
               <a href="#profissionais" className="hover:text-[#b4536a] transition-colors">
-                Para Salões
+                B2B
               </a>
             </nav>
 
@@ -174,13 +171,6 @@ export function Navbar() {
               Compre por Categoria
             </a>
             <a
-              href="#biolumini"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold uppercase tracking-wider text-stone-700"
-            >
-              Biolumini (Melasma Seguro)
-            </a>
-            <a
               href="#douglas-alan"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold uppercase tracking-wider text-stone-700"
@@ -192,7 +182,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold uppercase tracking-wider text-stone-700"
             >
-              Para Salões & Terapeutas (B2B)
+              B2B
             </a>
           </div>
         )}

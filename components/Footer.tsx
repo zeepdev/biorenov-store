@@ -84,7 +84,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#profissionais" className="hover:text-white transition-colors">
-                  Para Salões (B2B)
+                  B2B
                 </a>
               </li>
             </ul>
