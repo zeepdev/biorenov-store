@@ -12,9 +12,9 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <img
-              src="/logo.png"
+              src="/logo-white.png"
               alt="Biorenov Botanic Beauty"
-              className="h-10 w-auto object-contain brightness-0 invert"
+              className="h-8 sm:h-9 w-auto object-contain"
             />
             <p className="text-xs text-stone-400 max-w-sm leading-relaxed">
               Cosmetologia limpa e biotecnologia probiótica formulada por <strong>Douglas Alan</strong>.
