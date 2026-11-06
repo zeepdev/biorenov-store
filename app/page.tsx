@@ -7,6 +7,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { CategoryCircles } from "@/components/CategoryCircles";
 import { SplitPromoBanner } from "@/components/SplitPromoBanner";
 import { ProductCard } from "@/components/ProductCard";
+import { VideoCommunitySection } from "@/components/VideoCommunitySection";
 import { LowerTrustBar } from "@/components/LowerTrustBar";
 import { FounderSection } from "@/components/FounderSection";
 import { B2BSection } from "@/components/B2BSection";
@@ -71,7 +72,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 07 Founder & Formulations (Douglas Alan) */}
+        {/* 07 Community Videos Carousel (Creamy Skincare Style) */}
+        <VideoCommunitySection />
+
+        {/* 08 Founder & Formulations (Douglas Alan) */}
         <FounderSection />
 
         {/* 08 B2B Canal para Salões & Terapeutas */}
