@@ -33,16 +33,16 @@ export function SplitPromoBanner() {
           </div>
         </div>
 
-        {/* Right Column: Cream Texture Flatlay (Exact Velvetique Style) */}
-        <div className="md:col-span-7 relative min-h-[280px] bg-[#f9f5f2] overflow-hidden">
+        {/* Right Column: Real Studio Photography (Click Aky) */}
+        <div className="md:col-span-7 relative min-h-[320px] bg-[#f9f5f2] overflow-hidden flex items-center justify-center p-4">
           <img
-            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80"
-            alt="Textura e cuidados Biorenov"
-            className="w-full h-full object-cover"
+            src="/produtos/aky06791.jpg"
+            alt="Linha Biorenov Oficial"
+            className="w-full h-full object-cover rounded-lg"
           />
           {/* Subtle overlay badge */}
-          <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-xs px-4 py-2 rounded-lg text-xs font-semibold text-stone-800 shadow-sm border border-stone-200">
-            Fórmulas Probióticas Puras
+          <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-xs px-4 py-2 rounded-lg text-xs font-semibold text-stone-800 shadow-md border border-stone-200">
+            Fórmulas Biotecnológicas Douglas Alan
           </div>
         </div>
 

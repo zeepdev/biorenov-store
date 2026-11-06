@@ -7,6 +7,8 @@ export interface Product {
   indication: string;
   activeIngredients: string[];
   benefits: string[];
+  howToUse?: string;
+  compositionInfo?: string;
   price: number;
   originalPrice?: number;
   rating: number;
@@ -14,6 +16,7 @@ export interface Product {
   tag: string;
   category: "facial" | "capilar" | "terapeutico" | "solar" | "perfumaria" | "kits";
   image: string;
+  images: string[];
   volume: string;
   whatsappMessage: string;
   anvisa?: string;
@@ -21,14 +24,316 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: "dorless-terapeutico",
+    name: "Biorenov Bío Dorless Relaxante Muscular Antiestresse",
+    subtitle: "Frasco Ergonômico 240g • Tecnologia Purcell Win • Arnica & Copaíba",
+    badge: "Mais Vendido Terapêutico",
+    anvisa: "25351.022804/201-94",
+    description:
+      "Creme corporal inovador desenvolvido com a exclusiva Tecnologia Purcell Win para rápida absorção e alívio imediato sem resíduos gordurosos. Une os mais puros óleos da Amazônia, Copaíba pura, Arnica Montana e aromaterapia inteligente com fragrância exclusiva de Verbena.",
+    indication:
+      "Tensão muscular, dores articulares (artrite/artrose), estresse postural (costas/nuca), alívio pré e pós-treino e massagem terapêutica para toda a família.",
+    activeIngredients: [
+      "Arnica Montana Concentrada",
+      "Óleo Puro de Copaíba da Amazônia",
+      "Tecnologia Purcell Win",
+      "Fragrância Calmante de Verbena",
+      "Castanha da Índia & Mentol Suave",
+    ],
+    benefits: [
+      "Tecnologia Purcell Win: absorção ultrarrápida sem manchar roupas",
+      "Aromaterapia Inteligente de Verbena com ação calmante neural",
+      "Design ergonômico patenteado com encaixe anatômico perfeito nas mãos",
+      "Embalagem generosa de 240g de altíssimo rendimento",
+      "Alívio perceptível logo nos primeiros minutos de massagem",
+    ],
+    howToUse:
+      "Aplique uma quantidade generosa sobre a área desejada (ombros, nuca, lombar, pernas ou articulações). Massageie suavemente com movimentos circulares até a absorção total. Use diariamente ou após atividades físicas intensas.",
+    compositionInfo:
+      "Aqua, Arnica Montana Flower Extract, Copaifera Officinalis Resin, Menthol, Purcell Win Bio-Lipids, Aesculus Hippocastanum Extract, Verbena Officinalis Fragrance, Tocopherol.",
+    price: 89.9,
+    originalPrice: 109.0,
+    rating: 5.0,
+    reviewsCount: 194,
+    tag: "240g • Purcell Win",
+    category: "terapeutico",
+    image: "/produtos/aky06721.jpg",
+    images: [
+      "/produtos/aky06721.jpg",
+      "/produtos/aky06825.jpg",
+      "/produtos/aky06687.jpg",
+      "/produtos/aky06718.jpg",
+      "/produtos/aky06715.jpg",
+      "/produtos/aky06698.jpg",
+      "/produtos/aky06729.jpg",
+      "/produtos/aky06828.jpg",
+    ],
+    volume: "240 g",
+    whatsappMessage:
+      "Olá! Gostaria de pedir o Dorless Relaxante Muscular 240g com Arnica, Copaíba e Verbena.",
+  },
+  {
+    id: "creme-facial-btox-lifting",
+    name: "Biorenov Creme Facial Btox Lifting Age Freeze",
+    subtitle: "Efeito Lifting Tensor Imediato • Ácido Hialurônico, Vitamina E, Biotina & Niacinamida",
+    badge: "Hero Antissinais",
+    description:
+      "Creme facial de sustentação celular desenvolvido com bioativos tensores Age Freeze para combater a flacidez facial, remodelar o contorno do rosto e devolver elasticidade e firmeza à derme desde a primeira aplicação.",
+    indication:
+      "Flacidez facial, perda de contorno, linhas de expressão dinâmicas e estáticas, promovendo firmeza instantânea e rejuvenescimento gradual.",
+    activeIngredients: [
+      "Complexo Age Freeze Tensor",
+      "Ácido Hialurônico Fracionado",
+      "Vitamina E Antioxidante",
+      "Biotina Folicular Cutânea",
+      "Niacinamida Farmacêutica",
+    ],
+    benefits: [
+      "Efeito lifting imediato com suporte estrutural dérmico",
+      "Estimula colágeno e elastina, reduzindo aspecto cansado",
+      "Hidratação profunda sem efeito pesado ou oleoso",
+      "Ideal para protocolo diurno sob maquiagem e noturno restaurador",
+    ],
+    howToUse:
+      "Com a pele limpa e seca, aplique uma pequena quantidade no rosto, colo e pescoço. Espalhe com movimentos ascendentes (de baixo para cima) até completa absorção. Pode ser usado de manhã e à noite.",
+    compositionInfo:
+      "Aqua, Sodium Hyaluronate, Niacinamide, Tocopheryl Acetate, Biotin, Age Freeze Bio-Peptides, Vegetable Squalane, Phenoxyethanol.",
+    price: 179.0,
+    originalPrice: 219.0,
+    rating: 4.9,
+    reviewsCount: 112,
+    tag: "Lifting Imediato • Age Freeze",
+    category: "facial",
+    image: "/produtos/aky06763.jpg",
+    images: [
+      "/produtos/aky06763.jpg",
+      "/produtos/aky06840.jpg",
+      "/produtos/aky06766.jpg",
+      "/produtos/aky06767.jpg",
+      "/produtos/aky06791.jpg",
+      "/produtos/aky06843.jpg",
+    ],
+    volume: "50 g",
+    whatsappMessage:
+      "Olá! Gostaria de adquirir o Creme Facial Btox Lifting Age Freeze 50g da Biorenov.",
+  },
+  {
+    id: "perfume-capilar-corporal-raspberry",
+    name: "Biorenov Perfume Capilar e Corporal Bío Raspberry (Cremma Bacio)",
+    subtitle: "Framboesa Inglesa & Avelã • Aura de Elegância para Fios e Corpo",
+    badge: "Perfumaria Botânica",
+    description:
+      "Combina praticidade e sofisticação em uma fragrância versátil e marcante para o dia a dia. Pode ser aplicado tanto nos cabelos quanto no corpo, criando uma aura de elegância e frescor sem ressecar os fios e deixando a pele suavemente perfumada por muito mais tempo.",
+    indication:
+      "Perfumação sofisticada de cabelos e corpo com proteção contra odores externos (fumaça, poluição, academia) sem álcool agressivo ressecante.",
+    activeIngredients: [
+      "Extrato de Framboesa Inglesa",
+      "Notas Gourmand de Avelã e Baunilha",
+      "Silicones Botânicos Voláteis",
+      "Filtro Protetor de Brilho Cuticular",
+    ],
+    benefits: [
+      "Não resseca os fios capilares nem desbota químicas e colorações",
+      "Fixação duradoura com fragrância gourmand envolvente",
+      "Frasco compacto e elegante de 50ml para levar na bolsa",
+      "Ação anti-odor inteligente e toque acetinado",
+    ],
+    howToUse:
+      "Borrife a uma distância de 15 a 20 cm dos cabelos secos ou úmidos, do comprimento às pontas. Aplique também nos pontos de pulsação do corpo (pulsos, nuca e colo) para intensificar a projeção.",
+    compositionInfo:
+      "Alcohol Denat Cosmetic Grade, Fragrance (Parfum Raspberry & Hazelnut), Cyclopentasiloxane, Botanical Oils, Tocopherol.",
+    price: 119.0,
+    originalPrice: 145.0,
+    rating: 5.0,
+    reviewsCount: 126,
+    tag: "Cabelo & Corpo • Framboesa Inglesa",
+    category: "perfumaria",
+    image: "/produtos/aky06774.jpg",
+    images: [
+      "/produtos/aky06774.jpg",
+      "/produtos/aky06855.jpg",
+      "/produtos/aky06856.jpg",
+      "/produtos/aky06742.jpg",
+      "/produtos/aky06743.jpg",
+      "/produtos/aky06852.jpg",
+    ],
+    volume: "50 ml",
+    whatsappMessage:
+      "Olá! Gostaria de pedir o Perfume Capilar e Corporal Bío Raspberry Framboesa Inglesa.",
+  },
+  {
+    id: "bio-sun-care-protetor",
+    name: "Biorenov Dorless SunCare FPS 50+",
+    subtitle: "Clean & Care • Hidratação Refrescante & Proteção UVA/UVB com Toque Aveludado",
+    badge: "Linha Solar",
+    description:
+      "Hidratação refrescante e protetora para a pele antes e durante a exposição solar diária. Textura fluida e de rápida absorção que promove hidratação equilibrada sem pesar, mantendo a pele macia, protegida contra queimaduras e envelhecimento precoce com toque aveludado.",
+    indication:
+      "Proteção solar de alta eficácia UVA/UVB e luz visível, com barreira contra o fotoenvelhecimento, respeitando a flora biológica da derme.",
+    activeIngredients: [
+      "Filtros Fotoestáveis de Amplo Espectro",
+      "Complexo Hidratante Fluido Clean & Care",
+      "Antioxidantes Botânicos",
+      "Partículas Matificantes Antibrilho",
+    ],
+    benefits: [
+      "Alta proteção solar FPS 50+ sem resíduo esbranquiçado (white cast)",
+      "Toque aveludado e absorção em segundos",
+      "Não obstrui os poros (não comedogênico) e não causa espinhas",
+      "Fórmula amiga do microbioma cutâneo e resistente ao suor",
+    ],
+    howToUse:
+      "Aplique abundantemente sobre o rosto, pescoço e colo 30 minutos antes da exposição ao sol. Reaplique a cada 2 horas ou após sudorese intensa, nadar ou secar-se com toalha.",
+    compositionInfo:
+      "Aqua, Octocrylene, Ethylhexyl Methoxycinnamate, Zinc Oxide, Titanium Dioxide, Dimethicone, Glycerin, Silica, Phenoxyethanol.",
+    price: 119.0,
+    originalPrice: 139.0,
+    rating: 4.9,
+    reviewsCount: 79,
+    tag: "Toque Aveludado • Não Pesa",
+    category: "solar",
+    image: "/produtos/aky06735.jpg",
+    images: [
+      "/produtos/aky06735.jpg",
+      "/produtos/aky06848.jpg",
+      "/produtos/aky06849.jpg",
+      "/produtos/aky06851.jpg",
+    ],
+    volume: "60 g",
+    whatsappMessage:
+      "Olá! Gostaria de garantir o protetor facial Biorenov Dorless SunCare FPS 50+.",
+  },
+  {
+    id: "mascara-argila-verde-detox",
+    name: "Biorenov Máscara de Argila Verde Detox 2 em 1",
+    subtitle: "Esfoliante & Purificante • Couro Cabeludo & Rosto • Óxido de Zinco & Mentol",
+    badge: "Lançamento Exclusivo",
+    description:
+      "Tratamento desintoxicante duplo de alta performance: purifica profundamente o couro cabeludo combatendo oleosidade excessiva e caspa, e restaura o viço facial limpando poros obstruídos e promovendo sensação calmante e refrescante.",
+    indication:
+      "Controle de oleosidade capilar e facial, desobstrução folicular, combate a impurezas urbanas e refrescância anti-inflamatória.",
+    activeIngredients: [
+      "Argila Verde Mineralizada Pura",
+      "Óxido de Zinco Calmante",
+      "Mentol Refrescante & Ativador da Circulação",
+      "Bioativos Botânicos Adstringentes",
+    ],
+    benefits: [
+      "Fórmula 2 em 1: cuida do couro cabeludo e da face no mesmo protocolo",
+      "Desintoxica raízes capilares favorecendo o crescimento de novos fios",
+      "Regula a produção sebácea sem causar ressecamento",
+      "Ação refrescante imediata que alivia coceiras e irritações",
+    ],
+    howToUse:
+      "No couro cabeludo: aplique na raiz úmida, massageie suavemente por 3 minutos e enxágue antes do xampu. No rosto: aplique camada uniforme, deixe agir por 10 a 15 minutos até secar parcialmente e enxágue com água morna.",
+    compositionInfo:
+      "Aqua, Kaolin (Green Clay), Zinc Oxide, Menthol, Rosmarinus Officinalis Extract, Melaleuca Alternifolia Leaf Oil, Glycerin.",
+    price: 129.0,
+    originalPrice: 159.0,
+    rating: 4.9,
+    reviewsCount: 63,
+    tag: "2 em 1 • Couro & Rosto",
+    category: "capilar",
+    image: "/produtos/aky06748.jpg",
+    images: [
+      "/produtos/aky06748.jpg",
+      "/produtos/aky06751.jpg",
+    ],
+    volume: "160 g",
+    whatsappMessage:
+      "Olá! Gostaria de saber mais sobre a Máscara de Argila Verde Detox 2 em 1 da Biorenov.",
+  },
+  {
+    id: "tratamento-pernas-pes",
+    name: "Biorenov Tratamento Pernas e Pés com Esfoliante",
+    subtitle: "Creme Protetor Antifúngico • Fortalecedor de Cutículas • Previne Rachaduras",
+    badge: "Cuidado Avançado",
+    description:
+      "Fórmula multifuncional para pernas cansadas e pés ressecados. Combina microesfoliação suave para renovação celular com película protetora antimicótica, fortalecendo as cutículas e prevenindo rachaduras profundas no calcanhar.",
+    indication:
+      "Pés ásperos, rachaduras no calcanhar, pernas cansadas e pesadas, cutículas frágeis e proteção higienizante contra fungos e bactérias.",
+    activeIngredients: [
+      "Microesferas Esfoliantes Naturais",
+      "Agentes Protetores Antimicóticos",
+      "Complexo Fortalecedor de Cutículas",
+      "Óleo Essencial Tonificante para Circulação",
+    ],
+    benefits: [
+      "Cria película protetora invisível contra perda de umidade",
+      "Renova a textura da pele áspera dos pés desde o 1º uso",
+      "Alivia a sensação de peso e fadiga nas pernas no fim do dia",
+      "Ação antimicótica contínua recomendada por podólogos e terapeutas",
+    ],
+    howToUse:
+      "Aplique nos pés limpos e secos massageando os calcanhares e as unhas/cutículas. Estenda a massagem subindo pelas pernas com movimentos ascendentes até completa absorção.",
+    compositionInfo:
+      "Aqua, Urea, Melaleuca Alternifolia Oil, Prunus Amygdalus Dulcis Oil, Salicylic Acid, Menthol, Cetearyl Alcohol.",
+    price: 99.0,
+    originalPrice: 129.0,
+    rating: 4.9,
+    reviewsCount: 81,
+    tag: "Anti-Rachaduras & Pernas Leves",
+    category: "terapeutico",
+    image: "/produtos/aky06707.jpg",
+    images: [
+      "/produtos/aky06707.jpg",
+      "/produtos/aky06708.jpg",
+      "/produtos/aky06830.jpg",
+    ],
+    volume: "150 g",
+    whatsappMessage:
+      "Olá! Gostaria de pedir o Tratamento para Pernas e Pés da Biorenov.",
+  },
+  {
+    id: "kit-btox-trio",
+    name: "Kit Protocolo Trio Btox Lifting Age Freeze (3 x 50g)",
+    subtitle: "Tratamento Contínuo de 90 Dias • Efeito Lifting Tensor & Rejuvenescimento Facial",
+    badge: "Super Combo Econômico",
+    description:
+      "O protocolo definitivo de sustentação dérmica: leve 3 frascos do Creme Facial Btox Lifting Age Freeze com economia máxima e garanta o ciclo completo de renovação celular e firmeza facial de 90 dias com frete grátis.",
+    indication:
+      "Tratamento contínuo de firmeza dérmica para rosto, pescoço e colo, potencializando a síntese de colágeno a médio e longo prazo.",
+    activeIngredients: [
+      "3 Frascos Oficiais Btox Lifting 50g",
+      "Ácido Hialurônico + Vitamina E + Biotina + Niacinamida",
+      "Economia real de R$ 148,00 no combo",
+    ],
+    benefits: [
+      "Garante a continuidade essencial do tratamento por 3 meses",
+      "Economia expressiva comparado à compra individual",
+      "Frete Grátis garantido para todo o Brasil",
+      "5% de desconto extra no pagamento via Pix",
+    ],
+    howToUse:
+      "Utilize diariamente pela manhã e à noite. Cada frasco de 50g rende em média 30 dias de uso contínuo.",
+    compositionInfo:
+      "3x Creme Facial Btox Lifting Age Freeze 50g (Composição completa idêntica ao produto individual).",
+    price: 389.0,
+    originalPrice: 537.0,
+    rating: 5.0,
+    reviewsCount: 147,
+    tag: "Frete Grátis • Economia de R$ 148",
+    category: "kits",
+    image: "/produtos/aky06791.jpg",
+    images: [
+      "/produtos/aky06791.jpg",
+      "/produtos/aky06790.jpg",
+      "/produtos/aky06842.jpg",
+      "/produtos/aky06843.jpg",
+    ],
+    volume: "3 Frascos de 50g",
+    whatsappMessage:
+      "Olá! Gostaria de garantir o Kit Trio Btox Lifting Age Freeze com frete grátis e desconto no Pix.",
+  },
+  {
     id: "biolumini-uniformizador",
     name: "Biorenov Clareador e Rejuvenescedor Biolumini",
     subtitle: "Creme Uniformizador com Probióticos Ativos & Clareamento Seguro",
     badge: "Hero Dermocosmético",
     description:
-      "Tratamento de alta precisão biotecnológica formulado para uniformizar a tonalidade da pele, atuando diretamente em manchas de melasma e hiperpigmentação sem provocar o temido efeito rebote.",
+      "Tratamento de alta precisão biotecnológica formulado para uniformizar a tonalidade da pele, atuando diretamente em manchas de melasma, axilas, virilha e hiperpigmentação pós-inflamatória sem provocar o temido efeito rebote.",
     indication:
-      "Tratamento suave e eficaz de melasma, manchas solares, marcas pós-inflamatórias e fortalecimento contínuo da barreira cutânea facial e corporal.",
+      "Tratamento suave e eficaz de melasma, manchas solares, marcas pós-depilação, controle de odores em axilas e fortalecimento contínuo da barreira cutânea facial e corporal.",
     activeIngredients: [
       "Lisado Probiótico Ativo",
       "Fitocomplexo Clareador Botânico",
@@ -37,10 +342,15 @@ export const PRODUCTS: Product[] = [
     ],
     benefits: [
       "Clareamento gradativo e seguro sem descamação agressiva",
-      "Equilibra o microbioma e previne inflamações",
+      "Calmante eficaz para áreas sensibilizadas pós-depilação",
       "Zero efeito rebote com hidratação celular profunda",
+      "Auxilia no equilíbrio da microbiota e controle de odores axilares",
       "Dermatologicamente testado e seguro para uso contínuo",
     ],
+    howToUse:
+      "Com a pele limpa, aplique nas regiões com hiperpigmentação (rosto, axilas, virilhas ou mãos) massageando suavemente até absorção. Use à noite ou pela manhã sempre associado ao protetor Dorless SunCare FPS 50+.",
+    compositionInfo:
+      "Aqua, Probiotic Ferment Lysate, Niacinamide, Alpha-Arbutin, Kojic Dipalmitate, Chamomilla Recutita Extract, Tocopherol.",
     price: 189.9,
     originalPrice: 229.0,
     rating: 4.9,
@@ -48,6 +358,12 @@ export const PRODUCTS: Product[] = [
     tag: "Ação Sem Efeito Rebote",
     category: "facial",
     image: "/produtos/pdf_p5_img3.jpeg",
+    images: [
+      "/produtos/pdf_p5_img3.jpeg",
+      "/produtos/aky06821.jpg",
+      "/produtos/aky06701.jpg",
+      "/produtos/aky06819.jpg",
+    ],
     volume: "50 g",
     whatsappMessage:
       "Olá! Gostaria de saber mais sobre o Biolumini Probiótico para clareamento de melasma e como adquirir.",
@@ -58,21 +374,25 @@ export const PRODUCTS: Product[] = [
     subtitle: "Tônico Biotecnológico para Cabelos, Barba, Sobrancelhas e Fios",
     badge: "Hero Capilar & Folicular",
     description:
-      "Sérum capilar concentrado de alta absorção desenvolvido para estimular o crescimento ativo de novos fios em áreas como couro cabeludo, falhas na barba, sobrancelhas e cílios.",
+      "Sérum capilar concentrado de alta absorção desenvolvido para estimular o crescimento ativo de novos fios em áreas como couro cabeludo ralo, falhas na barba, sobrancelhas e cílios com tecnologia botânica pura.",
     indication:
-      "Aumento de densidade, ancoragem e aceleração do crescimento ativo para cabelos ralos, combate a falhas e regeneração folicular com bioativos vegetais.",
+      "Aumento de densidade, ancoragem e aceleração do crescimento ativo para cabelos ralos, combate à calvície e regeneração folicular com bioativos vegetais.",
     activeIngredients: [
       "Peptídeos Vegetais Bioidênticos",
       "Extrato de Brotos Botânicos",
       "Probióticos para Couro Cabeludo",
-      "Biotina Vegetal",
+      "Biotina Vegetal Pura",
     ],
     benefits: [
       "Estimula novos fios e reduz a queda folicular acentuada",
       "Eficaz para cabelo, barba, sobrancelhas e cílios",
-      "Não deixa raiz oleosa e não resseca o comprimento",
+      "Não deixa a raiz oleosa e não resseca o comprimento",
       "Fórmula 100% limpa, sem minoxidil sintético e sem formol",
     ],
+    howToUse:
+      "Aplique algumas gotas diretamente no couro cabeludo ou na região das sobrancelhas/barba. Massageie suavemente com as pontas dos dedos por 2 minutos. Não enxágue. Use diariamente, preferencialmente à noite.",
+    compositionInfo:
+      "Aqua, Biotinoyl Tripeptide-1, Pisum Sativum Sprout Extract, Probiotic Ferment, Panthenol, Glycerin, Hydrolyzed Lupine Protein.",
     price: 169.0,
     originalPrice: 199.0,
     rating: 4.9,
@@ -80,43 +400,13 @@ export const PRODUCTS: Product[] = [
     tag: "Fios + Barba + Sobrancelhas",
     category: "capilar",
     image: "/produtos/pdf_p5_img2.jpeg",
+    images: [
+      "/produtos/pdf_p5_img2.jpeg",
+      "/produtos/aky06748.jpg",
+    ],
     volume: "60 ml",
     whatsappMessage:
       "Olá! Quero saber como usar o Fator de Crescimento Vegano para recuperação e fortalecimento dos meus fios.",
-  },
-  {
-    id: "dorless-terapeutico",
-    name: "Biorenov Bío Dorless Relaxante Muscular Antiestresse",
-    subtitle: "Frasco Ergonômico 240g • Tecnologia Purcell Win • Arnica & Copaíba",
-    badge: "Linha Terapêutica",
-    anvisa: "25351.022804/201-94",
-    description:
-      "Creme corporal inovador desenvolvido com a exclusiva Tecnologia Purcell Win para rápida absorção e alívio imediato sem resíduos. Une óleos da Amazônia, Copaíba pura, Arnica Montana e aromaterapia inteligente com fragrância exclusiva de Verbena.",
-    indication:
-      "Tensão muscular, dores articulares (artrite/artrose), estresse postural (costas/nuca), alívio pós-treino e melhora da circulação local.",
-    activeIngredients: [
-      "Arnica Montana Concentrada",
-      "Óleo Puro de Copaíba da Amazônia",
-      "Tecnologia Purcell Win",
-      "Fragrância Calmante de Verbena",
-      "Castanha da Índia & Mentol",
-    ],
-    benefits: [
-      "Tecnologia Purcell Win: absorção ultrarrápida sem oleosidade",
-      "Aromaterapia Inteligente de Verbena com ação calmante neural",
-      "Design ergonômico patenteado com encaixe anatômico nas mãos",
-      "Embalagem generosa de 240g de alto rendimento",
-    ],
-    price: 89.9,
-    originalPrice: 109.0,
-    rating: 5.0,
-    reviewsCount: 194,
-    tag: "240g • Tecnologia Purcell Win",
-    category: "terapeutico",
-    image: "/produtos/dorless_render_1.png",
-    volume: "240 g",
-    whatsappMessage:
-      "Olá! Gostaria de pedir o Dorless Relaxante Muscular 240g com Arnica, Copaíba e Verbena.",
   },
   {
     id: "serum-24k-gold-foil",
@@ -124,7 +414,7 @@ export const PRODUCTS: Product[] = [
     subtitle: "Sérum Facial de Luxo com Ouro 24K, Ácido Hialurônico & Resveratrol",
     badge: "Alta Cosmetologia",
     description:
-      "Sérum facial de luxo enriquecido com partículas de ouro 24K, Ácido Hialurônico puro, Vitamina C e Resveratrol. Desenvolvido para uma hidratação celular profunda, combate aos radicais livres e viço rejuvenescedor imediato.",
+      "Sérum facial de luxo enriquecido com partículas de ouro 24K biocompatíveis, Ácido Hialurônico puro fracionado, Vitamina C e Resveratrol. Desenvolvido para uma hidratação celular profunda, combate aos radicais livres e viço rejuvenescedor imediato.",
     indication:
       "Luminosidade instantânea, efeito antioxidante potente, preenchimento de linhas finas e revitalização celular da pele cansada.",
     activeIngredients: [
@@ -137,8 +427,12 @@ export const PRODUCTS: Product[] = [
       "Brilho dourado natural e viço radiante desde o primeiro uso",
       "Estímulo intenso da síntese de colágeno natural",
       "Proteção antioxidante profunda contra envelhecimento prematuro",
-      "Textura leve com toque acetinado",
+      "Textura ultraleve com toque acetinado imediato",
     ],
+    howToUse:
+      "Aplique de 3 a 5 gotas na face, pescoço e colo previamente higienizados. Espalhe com movimentos circulares e leves batidinhas até que as partículas de ouro se fundam à derme.",
+    compositionInfo:
+      "Aqua, Gold 24K Flakes, Sodium Hyaluronate, Ascorbic Acid, Resveratrol, Glycerin, Hydroxyethylcellulose, Phenoxyethanol.",
     price: 198.0,
     originalPrice: 249.0,
     rating: 5.0,
@@ -146,41 +440,13 @@ export const PRODUCTS: Product[] = [
     tag: "Ouro 24K + Resveratrol",
     category: "facial",
     image: "/produtos/pdf_p5_img1.jpeg",
+    images: [
+      "/produtos/pdf_p5_img1.jpeg",
+      "/produtos/aky06763.jpg",
+    ],
     volume: "30 ml",
     whatsappMessage:
       "Olá! Gostaria de saber mais sobre o Sérum 24K Gold Foil da Biorenov.",
-  },
-  {
-    id: "creme-facial-btox-lifting",
-    name: "Biorenov Creme Facial Btox Lifting",
-    subtitle: "Efeito Lifting Tensor com Ácido Hialurônico, Vita C & Resveratrol",
-    badge: "Efeito Lifting",
-    description:
-      "Creme facial de sustentação celular desenvolvido com bioativos tensores para combater a flacidez facial, remodelar o contorno do rosto e devolver elasticidade e firmeza à derme.",
-    indication:
-      "Flacidez facial, perda de contorno, rugas dinâmicas e estáticas, promovendo sensação imediata de pele firme e tonificada.",
-    activeIngredients: [
-      "Complexo Peptídico Tensor",
-      "Ácido Hialurônico de Alto Impacto",
-      "Vitamina C",
-      "Resveratrol",
-    ],
-    benefits: [
-      "Efeito lifting tensor perceptível com suporte estrutural",
-      "Estimula elastina e reduz o aspecto de cansaço facial",
-      "Hidratação contínua sem pesar",
-      "Ideal para protocolo diurno e noturno",
-    ],
-    price: 179.0,
-    originalPrice: 219.0,
-    rating: 4.9,
-    reviewsCount: 112,
-    tag: "Lifting & Firmeza",
-    category: "facial",
-    image: "/produtos/btox_photo_1.png",
-    volume: "50 g",
-    whatsappMessage:
-      "Olá! Gostaria de adquirir o Creme Facial Btox Lifting da Biorenov.",
   },
   {
     id: "purifique-agua-micelar",
@@ -190,19 +456,23 @@ export const PRODUCTS: Product[] = [
     description:
       "Ideal para o cuidado diário de todos os tipos de pele. Formulação com pH fisiológico, 0% parabenos e tensoativos suaves e inovadores derivados de aminoácidos da maçã e do milho.",
     indication:
-      "Higienização diária suave, remoção de maquiagem, equilíbrio da flora cutânea e controle calmante sem repuxar.",
+      "Higienização diária suave, remoção de maquiagem à prova d'água, equilíbrio da flora cutânea e ação calmante sem repuxar.",
     activeIngredients: [
       "Aminoácidos da Maçã e do Milho",
       "Biofermento Probiótico",
-      "Pantenol Calmante",
+      "Pantenol Calmante (Pró-Vitamina B5)",
       "Água Termal Botânica",
     ],
     benefits: [
-      "100% livre de sulfatos agressivos e parabenos",
-      "Respeita o pH fisiológico e a barreira da microbiota",
-      "Remove impurezas e maquiagem com extrema delicadeza",
-      "Ação refrescante e calmante imediata",
+      "100% livre de sulfatos agressivos, sabão e parabenos",
+      "Respeita o pH fisiológico e a integridade da barreira cutânea",
+      "Remove maquiagem e poluição com extrema delicadeza",
+      "Sensação refrescante e hidratante instantânea",
     ],
+    howToUse:
+      "Umedeça um disco de algodão com a água micelar e passe suavemente pelo rosto, olhos e lábios. Não necessita de enxágue. Use pela manhã e à noite.",
+    compositionInfo:
+      "Aqua, Apple Amino Acids, Corn Glucosides, Panthenol, Probiotic Ferment, Disodium EDTA, Phenoxyethanol.",
     price: 79.9,
     originalPrice: 95.0,
     rating: 4.8,
@@ -210,94 +480,38 @@ export const PRODUCTS: Product[] = [
     tag: "Zero Sulfatos • Maçã & Milho",
     category: "facial",
     image: "/produtos/pdf_p7_img3.jpeg",
+    images: [
+      "/produtos/pdf_p7_img3.jpeg",
+      "/produtos/aky06780.jpg",
+    ],
     volume: "200 ml",
     whatsappMessage:
       "Olá! Gostaria de encomendar a Biorenov Purifique Água Micelar.",
   },
   {
-    id: "perfume-capilar-corporal-raspberry",
-    name: "Biorenov Perfume Capilar e Corporal Bío Raspberry",
-    subtitle: "Framboesa Inglesa & Avelã • Aura de Elegância para Fios e Corpo",
-    badge: "Perfumaria Botânica",
-    description:
-      "Combina praticidade e sofisticação em uma fragrância versátil e marcante para o dia a dia. Pode ser aplicado tanto nos cabelos quanto no corpo, criando uma aura de elegância e frescor sem ressecar os fios e deixando a pele suavemente perfumada por muito mais tempo.",
-    indication:
-      "Perfumação sofisticada de cabelos e corpo com proteção contra odores externos e sem álcool agressivo ressecante.",
-    activeIngredients: [
-      "Extrato de Framboesa Inglesa",
-      "Toque Reconfortante de Avelã",
-      "Silicones Botânicos Voláteis",
-      "Filtro Protetor de Brilho",
-    ],
-    benefits: [
-      "Não resseca os fios capilares nem desbota colorações",
-      "Fixação duradoura com fragrância gourmand envolvente",
-      "Frasco compacto e elegante de 50ml para levar na bolsa",
-      "Experiência sensorial marcante e exclusiva",
-    ],
-    price: 119.0,
-    originalPrice: 145.0,
-    rating: 5.0,
-    reviewsCount: 126,
-    tag: "Cabelo & Corpo • Framboesa Inglesa",
-    category: "perfumaria",
-    image: "/produtos/perfume_photo_2.png",
-    volume: "50 ml",
-    whatsappMessage:
-      "Olá! Gostaria de pedir o Perfume Capilar e Corporal Bío Raspberry Framboesa Inglesa.",
-  },
-  {
-    id: "bio-sun-care-protetor",
-    name: "Biorenov Dorless SunCare FPS 50+",
-    subtitle: "Hidratação Refrescante & Proteção Solar com Toque Aveludado",
-    badge: "Linha Solar",
-    description:
-      "Hidratação refrescante e protetora para a pele antes e durante a exposição solar. Textura fluida e de rápida absorção que promove hidratação equilibrada sem pesar, mantendo a pele macia, protegida e com toque suave ao longo do dia.",
-    indication:
-      "Proteção solar de alta eficácia UVA/UVB com barreira contra o fotoenvelhecimento e luz azul, respeitando a flora biológica da pele.",
-    activeIngredients: [
-      "Filtros Fotoestáveis de Amplo Espectro",
-      "Complexo Hidratante Fluido",
-      "Antioxidantes Botânicos",
-      "Toque Aveludado Antibrilho",
-    ],
-    benefits: [
-      "Alta proteção solar sem resíduo esbranquiçado",
-      "Toque aveludado e absorção em segundos",
-      "Não obstrui os poros e não causa cravos",
-      "Fórmula amiga do microbioma cutâneo",
-    ],
-    price: 119.0,
-    originalPrice: 139.0,
-    rating: 4.9,
-    reviewsCount: 79,
-    tag: "Toque Aveludado • Não Pesa",
-    category: "solar",
-    image: "/produtos/pdf_p6_img1.jpeg",
-    volume: "60 g",
-    whatsappMessage:
-      "Olá! Gostaria de garantir o protetor facial Biorenov Dorless SunCare.",
-  },
-  {
     id: "kit-ritual-botanico",
     name: "Kit Protocolo Completo Biorenov (3 Passos)",
-    subtitle: "Purifique Água Micelar + Biolumini Probiótico + Dorless SunCare",
+    subtitle: "Purifique Água Micelar + Biolumini Probiótico + Dorless SunCare FPS 50+",
     badge: "Protocolo Recomendado",
     description:
       "O protocolo diário perfeito desenvolvido pelo cosmetólogo Douglas Alan: 1. Purificar com aminoácidos da maçã e milho, 2. Tratar e clarear melasma com Biolumini, 3. Proteger com Dorless SunCare.",
     indication:
-      "Rotina completa de regeneração, clareamento seguro e blindagem solar diária com o melhor custo-benefício.",
+      "Rotina completa de regeneração celular, clareamento seguro e blindagem solar diária com o melhor custo-benefício.",
     activeIngredients: [
       "Tratamento Integrado de 3 Fórmulas Oficiais",
-      "Economia real no combo completo",
+      "Economia real de R$ 78,00 no combo completo",
       "Acompanha guia exclusivo de aplicação do cosmetólogo",
     ],
     benefits: [
-      "Sinergia de ativos para potencializar o clareamento do melasma",
+      "Sinergia de bioativos para potencializar o clareamento do melasma",
       "Frete Grátis garantido para todo o Brasil",
       "5% de desconto extra no pagamento via Pix",
       "Resultados potencializados pela ordem correta de aplicação",
     ],
+    howToUse:
+      "Passo 1 (Manhã e Noite): Limpar o rosto com a Água Micelar Purifique. Passo 2: Aplicar o Biolumini Probiótico nas áreas de melasma e marcas. Passo 3 (Manhã): Finalizar com a proteção solar Dorless SunCare FPS 50+.",
+    compositionInfo:
+      "Contém 1x Purifique Água Micelar 200ml, 1x Biolumini 50g e 1x Dorless SunCare 60g.",
     price: 349.0,
     originalPrice: 388.8,
     rating: 5.0,
@@ -305,6 +519,12 @@ export const PRODUCTS: Product[] = [
     tag: "Frete Grátis • Economia de R$ 78+",
     category: "kits",
     image: "/produtos/pdf_p8_img2.png",
+    images: [
+      "/produtos/pdf_p8_img2.png",
+      "/produtos/aky06791.jpg",
+      "/produtos/aky06721.jpg",
+      "/produtos/aky06735.jpg",
+    ],
     volume: "3 Produtos Oficiais",
     whatsappMessage:
       "Olá! Quero pedir o Kit Protocolo Completo Biorenov (3 Passos) com frete grátis e desconto no Pix.",

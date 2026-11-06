@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function Hero() {
@@ -57,7 +58,7 @@ export function Hero() {
               <div className="relative z-10 grid grid-cols-3 gap-3 sm:gap-6 items-end justify-center w-full px-4">
                 
                 {/* Product 1: Biolumini Melasma */}
-                <div className="flex flex-col items-center group">
+                <Link href="/produto/biolumini-uniformizador" className="flex flex-col items-center group cursor-pointer">
                   <div className="relative aspect-square w-full rounded-2xl bg-white/60 p-3 sm:p-4 shadow-sm border border-pink-100 flex items-center justify-center hover:scale-105 transition-transform">
                     <img
                       src="/produtos/pdf_p5_img3.jpeg"
@@ -65,16 +66,16 @@ export function Hero() {
                       className="max-h-36 sm:max-h-52 w-auto object-contain drop-shadow-md"
                     />
                   </div>
-                  <span className="text-[11px] font-semibold text-stone-700 mt-2 text-center">
+                  <span className="text-[11px] font-semibold text-stone-700 mt-2 text-center group-hover:text-[#b4536a] transition-colors">
                     Biolumini Clareador
                   </span>
-                </div>
+                </Link>
 
                 {/* Product 2: Dorless 240g (Center piece) */}
-                <div className="flex flex-col items-center group -mt-6">
+                <Link href="/produto/dorless-terapeutico" className="flex flex-col items-center group -mt-6 cursor-pointer">
                   <div className="relative aspect-square w-full rounded-2xl bg-white/80 p-3 sm:p-4 shadow-md border border-pink-200 flex items-center justify-center hover:scale-105 transition-transform">
                     <img
-                      src="/produtos/dorless_render_1.png"
+                      src="/produtos/aky06721.jpg"
                       alt="Dorless 240g"
                       className="max-h-44 sm:max-h-64 w-auto object-contain drop-shadow-lg"
                     />
@@ -82,21 +83,21 @@ export function Hero() {
                   <span className="text-[11px] font-bold text-[#b4536a] mt-2 text-center">
                     Dorless 240g
                   </span>
-                </div>
+                </Link>
 
                 {/* Product 3: Btox Facial Lifting */}
-                <div className="flex flex-col items-center group">
+                <Link href="/produto/creme-facial-btox-lifting" className="flex flex-col items-center group cursor-pointer">
                   <div className="relative aspect-square w-full rounded-2xl bg-white/60 p-3 sm:p-4 shadow-sm border border-pink-100 flex items-center justify-center hover:scale-105 transition-transform">
                     <img
-                      src="/produtos/btox_photo_1.png"
+                      src="/produtos/aky06763.jpg"
                       alt="Btox Facial Lifting"
                       className="max-h-36 sm:max-h-52 w-auto object-contain drop-shadow-md"
                     />
                   </div>
-                  <span className="text-[11px] font-semibold text-stone-700 mt-2 text-center">
+                  <span className="text-[11px] font-semibold text-stone-700 mt-2 text-center group-hover:text-[#b4536a] transition-colors">
                     Btox Lifting Tensor
                   </span>
-                </div>
+                </Link>
 
               </div>
 

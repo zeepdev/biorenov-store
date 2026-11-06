@@ -12,32 +12,32 @@ export function CategoryCircles({ onSelectCategory, selectedCategory }: Category
     {
       id: "facial",
       label: "SKINCARE",
-      image: "/produtos/pdf_p5_img3.jpeg",
+      image: "/produtos/aky06763.jpg",
     },
     {
       id: "terapeutico",
       label: "ALÍVIO MUSCULAR",
-      image: "/produtos/dorless_render_1.png",
+      image: "/produtos/aky06721.jpg",
     },
     {
       id: "capilar",
       label: "CUIDADOS CAPILARES",
-      image: "/produtos/pdf_p5_img2.jpeg",
+      image: "/produtos/aky06748.jpg",
     },
     {
-      id: "facial",
-      label: "ALTA COSMETOLOGIA",
-      image: "/produtos/pdf_p5_img1.jpeg",
+      id: "perfumaria",
+      label: "PERFUMARIA BOTÂNICA",
+      image: "/produtos/aky06774.jpg",
     },
     {
       id: "solar",
       label: "PROTEÇÃO SOLAR",
-      image: "/produtos/pdf_p6_img1.jpeg",
+      image: "/produtos/aky06735.jpg",
     },
     {
       id: "kits",
       label: "KITS DE TRATAMENTO",
-      image: "/produtos/pdf_p8_img2.png",
+      image: "/produtos/aky06791.jpg",
     },
   ];
 
