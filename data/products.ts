@@ -518,12 +518,12 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 215,
     tag: "Frete Grátis • Economia de R$ 78+",
     category: "kits",
-    image: "/produtos/pdf_p8_img2.png",
+    image: "/produtos/aky06791.jpg",
     images: [
-      "/produtos/pdf_p8_img2.png",
       "/produtos/aky06791.jpg",
-      "/produtos/aky06721.jpg",
       "/produtos/aky06735.jpg",
+      "/produtos/pdf_p5_img3.jpeg",
+      "/produtos/pdf_p7_img3.jpeg",
     ],
     volume: "3 Produtos Oficiais",
     whatsappMessage:
