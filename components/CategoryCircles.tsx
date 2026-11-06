@@ -12,47 +12,47 @@ export function CategoryCircles({ onSelectCategory, selectedCategory }: Category
     {
       id: "facial",
       label: "SKINCARE",
-      image: "/produtos/aky06763.jpg",
+      image: "/categorias/cat_facial.jpg",
     },
     {
       id: "terapeutico",
       label: "ALÍVIO MUSCULAR",
-      image: "/produtos/aky06721.jpg",
+      image: "/categorias/cat_terapeutico.jpg",
     },
     {
       id: "capilar",
       label: "CUIDADOS CAPILARES",
-      image: "/produtos/aky06748.jpg",
+      image: "/categorias/cat_capilar.jpg",
     },
     {
       id: "perfumaria",
       label: "PERFUMARIA BOTÂNICA",
-      image: "/produtos/aky06774.jpg",
+      image: "/categorias/cat_perfumaria.jpg",
     },
     {
       id: "solar",
       label: "PROTEÇÃO SOLAR",
-      image: "/produtos/aky06735.jpg",
+      image: "/categorias/cat_solar.jpg",
     },
     {
       id: "kits",
       label: "KITS DE TRATAMENTO",
-      image: "/produtos/aky06791.jpg",
+      image: "/categorias/cat_kits.jpg",
     },
   ];
 
   return (
-    <section id="categorias" className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="categorias" className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Title with pink underline (Exact Velvetique Style) */}
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 sm:mb-12">
         <h2 className="font-serif text-2xl sm:text-3xl text-stone-900 tracking-wider uppercase font-normal">
           Shop by Category
         </h2>
         <div className="w-14 h-0.5 bg-[#b4536a] mx-auto mt-2 rounded-full" />
       </div>
 
-      {/* 6 Circular Category Pods */}
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 sm:gap-6 justify-items-center">
+      {/* 6 Circular Category Pods (Fills edge-to-edge with no inner squares) */}
+      <div className="grid grid-cols-3 sm:grid-cols-6 gap-5 sm:gap-6 justify-items-center">
         {categories.map((cat, idx) => {
           const isSelected = selectedCategory === cat.id;
           return (
@@ -63,28 +63,27 @@ export function CategoryCircles({ onSelectCategory, selectedCategory }: Category
                 const el = document.getElementById("produtos");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
-              className="flex flex-col items-center group cursor-pointer text-center"
+              className="flex flex-col items-center group cursor-pointer text-center w-full max-w-[140px]"
             >
-              {/* Soft Pink Circle Wrapper */}
+              {/* Perfect Velvetique Circle: edge-to-edge photo fill */}
               <div
-                className={`w-24 h-24 sm:w-28 sm:h-28 rounded-full p-2.5 flex items-center justify-center transition-all duration-300 ${
+                className={`relative aspect-square w-24 sm:w-32 md:w-36 rounded-full overflow-hidden shadow-xs border transition-all duration-300 ${
                   isSelected
-                    ? "bg-[#b4536a] ring-2 ring-[#b4536a] ring-offset-2 scale-105 shadow-md"
-                    : "bg-[#f9ece8] hover:bg-[#f4ded9] group-hover:scale-105"
+                    ? "border-[#b4536a] ring-3 ring-[#b4536a] ring-offset-2 scale-105 shadow-md"
+                    : "border-stone-200/90 hover:border-[#b4536a]/50 group-hover:scale-105 group-hover:shadow-md"
                 }`}
               >
-                <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center p-2 shadow-2xs">
-                  <img
-                    src={cat.image}
-                    alt={cat.label}
-                    className="w-full h-full object-contain transition-transform group-hover:scale-110"
-                  />
-                </div>
+                <img
+                  src={cat.image}
+                  alt={cat.label}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
               </div>
 
-              {/* Label */}
+              {/* Category Label */}
               <span
-                className={`text-[11px] sm:text-xs mt-3 font-semibold uppercase tracking-wider transition-colors ${
+                className={`text-[10px] sm:text-xs mt-3 font-semibold uppercase tracking-wider transition-colors line-clamp-1 ${
                   isSelected ? "text-[#b4536a]" : "text-stone-700 group-hover:text-[#b4536a]"
                 }`}
               >
