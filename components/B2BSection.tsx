@@ -24,42 +24,42 @@ export function B2BSection() {
   };
 
   return (
-    <section id="profissionais" className="py-16 md:py-24 bg-white border-b border-[#e6e2d8]">
+    <section id="profissionais" className="py-16 md:py-24 bg-white border-b border-stone-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
           {/* Left Column: B2B Pitch */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f5ede6] border border-[#e2d0c2] text-[#8d5b3a] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-[#c84b68] text-xs font-black uppercase tracking-wider">
               <Scissors className="w-3.5 h-3.5" />
-              Canal Exclusivo para Profissionais
+              Canal para Salões, Clínicas & Spas
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#183324] font-normal leading-tight">
+            <h2 className="font-heading font-black text-3xl sm:text-4xl text-[#24171d] leading-tight tracking-tight">
               Introduza a Terapia Probiótica no seu Salão ou Clínica.
             </h2>
 
             <p className="text-stone-700 text-sm leading-relaxed">
-              Os clientes mais exigentes não buscam mais procedimentos químicos agressivos.
-              Eles buscam <strong>saúde capilar real, recuperação de densidade folicular e regeneração celular</strong>.
+              Os clientes mais exigentes buscam <strong>saúde celular real, recuperação de densidade folicular e regeneração profunda</strong> com ativos biocompatíveis.
             </p>
 
-            <div className="space-y-3 pt-2 text-xs text-stone-700">
+            <div className="space-y-3.5 pt-2 text-xs text-stone-700">
               <div className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#587d65] flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#c84b68] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Protocolos Exclusivos de Lavatório:</strong> Fator de Crescimento Vegano e Água Micelar Probiótica com alto rendimento para terapeutas capilares.
+                  <strong>Protocolos Exclusivos de Lavatório:</strong> Fator de Crescimento Vegano e Água Micelar Probiótica de alto rendimento.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#587d65] flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#c84b68] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Margem Expressiva para Revenda (D2C Salão):</strong> Biolumini e Dorless com alta taxa de recompra pelas próprias clientes.
+                  <strong>Margem Expressiva para Revenda (D2C Salão):</strong> Linha Raspberry Hazelnut, Dorless e Biolumini com altíssima taxa de recompra.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#587d65] flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#c84b68] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Treinamento Direto com Douglas Alan:</strong> Material técnico, certificados e suporte em protocolos de aplicação.
+                  <strong>Suporte Técnico Direto:</strong> Protocolos de aplicação, certificados e materiais para sua bancada.
                 </span>
               </div>
             </div>
@@ -67,10 +67,10 @@ export function B2BSection() {
 
           {/* Right Column: Interactive B2B Form */}
           <div className="lg:col-span-6">
-            <div className="bg-[#f9f8f5] p-8 rounded-3xl border border-[#e6e2d8] shadow-lg">
+            <div className="bg-[#faf5f3] p-8 rounded-3xl border border-stone-200 shadow-sm">
               <div className="flex items-center gap-2 mb-6">
-                <Building2 className="w-5 h-5 text-[#8d5b3a]" />
-                <h3 className="font-serif text-xl font-bold text-[#183324]">
+                <Building2 className="w-5 h-5 text-[#c84b68]" />
+                <h3 className="font-heading font-black text-xl text-[#24171d] tracking-tight">
                   Solicitar Condições Especiais B2B
                 </h3>
               </div>
@@ -78,7 +78,7 @@ export function B2BSection() {
               {submitted ? (
                 <div className="p-6 bg-emerald-50 rounded-2xl border border-emerald-200 text-center space-y-3">
                   <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
-                  <h4 className="font-serif text-lg font-bold text-emerald-900">
+                  <h4 className="font-heading font-black text-lg text-emerald-900">
                     Solicitação Encaminhada!
                   </h4>
                   <p className="text-xs text-stone-600">
@@ -88,7 +88,7 @@ export function B2BSection() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-xs font-semibold text-stone-700 mb-1">
+                    <label className="block text-xs font-bold text-stone-700 mb-1">
                       Seu Nome Completo *
                     </label>
                     <input
@@ -97,13 +97,13 @@ export function B2BSection() {
                       placeholder="Ex: Amanda Fonseca"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#183324]/30 focus:border-[#183324] bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-[#c84b68] bg-white"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 mb-1">
+                      <label className="block text-xs font-bold text-stone-700 mb-1">
                         WhatsApp com DDD *
                       </label>
                       <input
@@ -112,11 +112,11 @@ export function B2BSection() {
                         placeholder="(11) 99999-9999"
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#183324]/30 focus:border-[#183324] bg-white"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-[#c84b68] bg-white"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 mb-1">
+                      <label className="block text-xs font-bold text-stone-700 mb-1">
                         Cidade / UF *
                       </label>
                       <input
@@ -125,13 +125,13 @@ export function B2BSection() {
                         placeholder="São Paulo - SP"
                         value={form.cityState}
                         onChange={(e) => setForm({ ...form, cityState: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#183324]/30 focus:border-[#183324] bg-white"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-[#c84b68] bg-white"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-stone-700 mb-1">
+                    <label className="block text-xs font-bold text-stone-700 mb-1">
                       Nome do Salão, Clínica ou Espaço *
                     </label>
                     <input
@@ -140,18 +140,18 @@ export function B2BSection() {
                       placeholder="Ex: Studio Amanda Hair & Estética"
                       value={form.businessName}
                       onChange={(e) => setForm({ ...form, businessName: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#183324]/30 focus:border-[#183324] bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-[#c84b68] bg-white"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-stone-700 mb-1">
+                    <label className="block text-xs font-bold text-stone-700 mb-1">
                       Principal Interesse
                     </label>
                     <select
                       value={form.interest}
                       onChange={(e) => setForm({ ...form, interest: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#183324]/30 focus:border-[#183324] bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-[#c84b68] bg-white"
                     >
                       <option value="lavatorio">Uso Profissional em Bancada / Lavatório</option>
                       <option value="revenda">Revenda para Clientes Finais (Home Care)</option>
@@ -161,10 +161,10 @@ export function B2BSection() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl bg-[#183324] hover:bg-[#12261b] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-colors"
+                    className="w-full py-3.5 rounded-full bg-[#24171d] hover:bg-[#c84b68] text-white text-xs font-black uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
                   >
                     <span>Falar com o Canal B2B no WhatsApp</span>
-                    <Send className="w-4 h-4" />
+                    <MessageCircle className="w-4 h-4" />
                   </button>
 
                   <p className="text-[11px] text-stone-500 text-center">

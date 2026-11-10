@@ -529,4 +529,123 @@ export const PRODUCTS: Product[] = [
     whatsappMessage:
       "Olá! Quero pedir o Kit Protocolo Completo Biorenov (3 Passos) com frete grátis e desconto no Pix.",
   },
+  {
+    id: "kit-trio-raspberry-hazelnut",
+    name: "Kit Coleção Raspberry Hazelnut (Framboesa & Avelã)",
+    subtitle: "Trio Completo: Cremma Bacio 30g + Body Splash 100ml + Deo Colônia Marcante",
+    badge: "Lançamento Especial",
+    description:
+      "Uma experiência sensorial envolvente que une o frescor vibrante da framboesa à sofisticação cremosa da avelã. Desenvolvido para perfumar na medida certa, hidratar sem pesar e proporcionar sensação de frescor prolongado durante todo o dia.",
+    indication:
+      "Cuidado diário das mãos e perfumaria corporal sofisticada para quem valoriza fragrâncias doces, modernas, marcantes e confortáveis na pele.",
+    activeIngredients: [
+      "Extrato Botânico de Framboesa Silvestre",
+      "Manteiga Nutritiva de Avelã Pura",
+      "Bio-ativos Emolientes de Rápida Absorção",
+      "Base Floral Frutada Delicada",
+      "Fragrância Fina com Fixação Prolongada",
+    ],
+    benefits: [
+      "Perfuma na medida certa: notas elegantes sem sobrecarregar o olfato",
+      "Sensação de frescor prolongado ao longo do dia inteiro",
+      "Fórmula leve, sedosa e de rápida absorção para o uso diário",
+      "Fragrância doce, moderna, feminina e marcante",
+      "Contém o trio completo: Creme para as Mãos (30g), Body Splash (100ml) e Deo Colônia",
+    ],
+    howToUse:
+      "Cremma Bacio: Aplique uma pequena porção nas mãos secas massageando suavemente até completa absorção. Body Splash: Borrife generosamente sobre o corpo após o banho ou sempre que desejar renovar o frescor. Deo Colônia: Aplique nos pontos de pulsação (punhos, pescoço e colo) para fixação duradoura.",
+    compositionInfo:
+      "Fragrância exclusiva Framboesa & Avelã. Livre de parabenos pesados. 100% cruelty-free e desenvolvido com bioativos seguros.",
+    price: 189.0,
+    originalPrice: 229.0,
+    rating: 5.0,
+    reviewsCount: 87,
+    tag: "Trio Completo • Framboesa & Avelã",
+    category: "kits",
+    image: "/produtos/kit_raspberry_hazelnut.jpg",
+    images: [
+      "/banners/raspberry_hazelnut_banner.jpg",
+      "/produtos/kit_raspberry_hazelnut.jpg",
+    ],
+    volume: "Kit com 3 Produtos",
+    whatsappMessage:
+      "Olá! Gostaria de garantir o Kit Linha Raspberry Hazelnut (Framboesa & Avelã) com desconto de lançamento.",
+  },
+  {
+    id: "body-splash-raspberry-hazelnut",
+    name: "Body Splash Fresh & Fragrant Raspberry Hazelnut 100ml",
+    subtitle: "Névoa Perfumada Corporal • Framboesa & Avelã • Frescor Prolongado",
+    badge: "Mais Vendido Perfumaria",
+    description:
+      "Névoa corporal aromática e refrescante formulada com o equilíbrio perfeito entre o adocicado luminoso da framboesa e o conforto envolvente da avelã. Proporciona perfumação agradável, leve e revigorante.",
+    indication:
+      "Perfumação diária pós-banho, para reaplicar ao longo do dia e deixar a pele delicadamente perfumada.",
+    activeIngredients: [
+      "Extrato de Framboesa Silvestre",
+      "Bio-hidratantes de toque aveludado",
+      "Notas florais e frutadas elegantes",
+    ],
+    benefits: [
+      "Fragrância doce e equilibrada, moderna e irresistível",
+      "Sensação imediata de frescor e banho recém-tomado",
+      "Não resseca e não agride a barreira natural da pele",
+      "Frasco prático de 100ml com válvula spray ultrafina",
+    ],
+    howToUse:
+      "Borrife sobre todo o corpo a uma distância de 15cm. Pode ser reaplicado sempre que quiser renovar o aroma e a sensação de bem-estar.",
+    compositionInfo: "Alcohol, Aqua, Parfum, Raspberry Extract, Hazelnut Notes, Glycerin, Tocopherol.",
+    price: 79.9,
+    originalPrice: 94.0,
+    rating: 4.9,
+    reviewsCount: 64,
+    tag: "100ml • Fresh & Fragrant",
+    category: "perfumaria",
+    image: "/produtos/kit_raspberry_hazelnut.jpg",
+    images: [
+      "/produtos/kit_raspberry_hazelnut.jpg",
+      "/banners/raspberry_hazelnut_banner.jpg",
+    ],
+    volume: "100ml",
+    whatsappMessage:
+      "Olá! Gostaria de comprar o Body Splash Raspberry Hazelnut 100ml da Biorenov.",
+  },
+  {
+    id: "cremma-bacio-raspberry",
+    name: "Cremma Bacio Creme Hidratante para as Mãos Raspberry 30g",
+    subtitle: "Toque Acetinado • Nutrição com Avelã • Rápida Absorção",
+    badge: "Essencial Bolsa",
+    description:
+      "Creme nutritivo concentrado para mãos e cutículas. Enriquecido com manteiga emoliente de avelã e fragrância suculenta de framboesa, cria uma película protetora sedosa sem deixar as mãos pegajosas.",
+    indication:
+      "Ressecamento das mãos, cutículas desidratadas e proteção contra o ressecamento do sabonete e álcool gel.",
+    activeIngredients: [
+      "Manteiga de Avelã Pura",
+      "Extrato de Framboesa",
+      "Glicerina Vegetal Probiótica",
+      "Vitamina E Antioxidante",
+    ],
+    benefits: [
+      "Absorção imediata: digite no celular ou teclado segundos após aplicar",
+      "Perfuma delicadamente as mãos o dia inteiro",
+      "Protege contra rachaduras e ressecamento",
+      "Tamanho perfeito para carregar na bolsa ou nécessaire",
+    ],
+    howToUse:
+      "Aplique uma pequena quantidade no dorso das mãos e massageie suavemente nos dedos e cutículas sempre que sentir necessidade.",
+    compositionInfo: "Aqua, Corylus Avellana Seed Oil, Cetearyl Alcohol, Glycerin, Tocopheryl Acetate, Raspberry Fragrance.",
+    price: 49.9,
+    originalPrice: 59.9,
+    rating: 5.0,
+    reviewsCount: 52,
+    tag: "30g • Toque Aveludado",
+    category: "facial",
+    image: "/produtos/kit_raspberry_hazelnut.jpg",
+    images: [
+      "/produtos/kit_raspberry_hazelnut.jpg",
+      "/banners/raspberry_hazelnut_banner.jpg",
+    ],
+    volume: "30g",
+    whatsappMessage:
+      "Olá! Quero pedir o Cremma Bacio Creme para Mãos Raspberry 30g.",
+  },
 ];

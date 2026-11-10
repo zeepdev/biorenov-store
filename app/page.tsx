@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { CategoryCircles } from "@/components/CategoryCircles";
-import { SplitPromoBanner } from "@/components/SplitPromoBanner";
+import { RaspberryBannerSection } from "@/components/RaspberryBannerSection";
 import { ProductCard } from "@/components/ProductCard";
 import { VideoCommunitySection } from "@/components/VideoCommunitySection";
 import { LowerTrustBar } from "@/components/LowerTrustBar";
@@ -44,8 +44,8 @@ export default function Home() {
           onSelectCategory={setSelectedCategory}
         />
 
-        {/* 05 Split Promo Banner (Up to 30% Off on Best Sellers) */}
-        <SplitPromoBanner />
+        {/* 05 Linha Raspberry Hazelnut Campaign Spotlight */}
+        <RaspberryBannerSection />
 
         {/* 06 Best Sellers Grid (Creamy Style) */}
         <section id="produtos" className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
