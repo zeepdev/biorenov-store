@@ -18,8 +18,8 @@ export function FaqSection() {
       a: "Sim! Por serem 100% veganas, limpas e livres de ácidos agressivos (sem parabenos pesados, formol ou derivados tóxicos), nossos produtos oferecem extrema biocompatibilidade e conforto diário.",
     },
     {
-      q: "O Fator de Crescimento Vegano serve para sobrancelhas e barba?",
-      a: "Sim! Sua formulação foi desenhada para atuar em qualquer folículo piloso do corpo. Ele estimula o bulbo folicular sem irritar a mucosa dos olhos ou a pele do rosto, sendo excelente para correção de falhas.",
+      q: "Como o Biolumini atua no clareamento de melasma e manchas?",
+      a: "O Biolumini combina bioativos botânicos de alta penetração e probióticos que inibem a superprodução de melanina sem causar efeito rebote e sem sensibilizar a barreira protetora da pele.",
     },
     {
       q: "Quais os prazos de entrega e valor do frete?",

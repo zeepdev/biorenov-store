@@ -47,7 +47,7 @@ export function B2BSection() {
               <div className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#c84b68] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Protocolos Exclusivos de Lavatório:</strong> Fator de Crescimento Vegano e Água Micelar Probiótica de alto rendimento.
+                  <strong>Protocolos Exclusivos de Lavatório:</strong> Purifique Água Micelar Probiótica e fórmulas botânicas de alto rendimento.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
