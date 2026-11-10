@@ -6,10 +6,10 @@
   --rose-accent: #c35e76;
   --rose-light: #faf3ef;
   --rose-card: #f8ebe8;
-  --plum-footer: #361d26;
-  --plum-dark: #2a151d;
-  --text-dark: #221a1d;
-  --border-light: #ede5e1;
+  --plum-footer: #2b141d;
+  --plum-dark: #200e16;
+  --text-dark: #121214;
+  --border-light: #ece6e2;
 }
 
 body {
@@ -20,8 +20,11 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .font-serif {
-  font-family: var(--font-serif), Georgia, serif;
+/* Tipografia Chunky / Arredondada estilo Creamy / Poppins Black / Gotham Ultra */
+h1, h2, h3, h4, h5, h6, .font-heading, .font-serif {
+  font-family: var(--font-heading), var(--font-sans), system-ui, sans-serif !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  letter-spacing: -0.025em;
 }
 
 /* Custom scrollbar */

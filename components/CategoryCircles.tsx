@@ -43,12 +43,15 @@ export function CategoryCircles({ onSelectCategory, selectedCategory }: Category
 
   return (
     <section id="categorias" className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Title with pink underline (Exact Velvetique Style) */}
+      {/* Title with pink underline (Creamy Skincare Style) */}
       <div className="text-center mb-10 sm:mb-12">
-        <h2 className="font-serif text-2xl sm:text-3xl text-stone-900 tracking-wider uppercase font-normal">
-          Shop by Category
+        <span className="text-[11px] font-black uppercase tracking-widest text-[#b4536a] block mb-1">
+          Explore por Necessidade
+        </span>
+        <h2 className="font-heading font-black text-2xl sm:text-3xl text-stone-900 tracking-tight uppercase">
+          Categorias em Destaque
         </h2>
-        <div className="w-14 h-0.5 bg-[#b4536a] mx-auto mt-2 rounded-full" />
+        <div className="w-14 h-1 bg-[#b4536a] mx-auto mt-3 rounded-full" />
       </div>
 
       {/* 6 Circular Category Pods (Fills edge-to-edge with no inner squares) */}

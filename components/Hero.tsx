@@ -24,26 +24,26 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
-          {/* Left Column: Velvetique Editorial Copy */}
+          {/* Left Column: Chunky Creamy-Style Headline */}
           <div className="lg:col-span-5 space-y-5 text-left">
-            <span className="text-xs uppercase tracking-widest text-stone-600 font-semibold block">
-              Novidade Biorenov
+            <span className="inline-block px-3 py-1 rounded-full bg-pink-100 text-[#b4536a] text-[11px] uppercase tracking-wider font-black">
+              Biotecnologia & Alta Performance
             </span>
 
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-[64px] text-[#24171d] leading-[1.08] tracking-tight font-normal">
+            <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-[62px] text-[#24171d] leading-[1.04] tracking-tight">
               Pele Radiante. <br />
-              <span className="font-serif">Confiança Real.</span>
+              <span className="text-[#b4536a]">Confiança Real.</span>
             </h1>
 
-            <p className="text-stone-600 text-sm sm:text-base max-w-md font-normal leading-relaxed">
-              Beleza limpa e biotecnologia probiótica que nutre, regenera e empodera
-              a saúde da sua pele e fios com ativos biocompatíveis.
+            <p className="text-stone-600 text-sm sm:text-base max-w-md font-medium leading-relaxed">
+              Fórmulas concentradas, bioativos botânicos e cuidados dermatológicos
+              inteligentes para melasma, fios e alívio muscular.
             </p>
 
             <div className="pt-2">
               <a
                 href="#produtos"
-                className="inline-block px-8 py-3.5 rounded-md bg-[#b4536a] hover:bg-[#9c4357] text-white text-xs font-semibold uppercase tracking-wider shadow-sm transition-all cursor-pointer"
+                className="inline-block px-8 py-4 rounded-full bg-[#b4536a] hover:bg-[#9c4357] text-white text-xs font-black uppercase tracking-wider shadow-lg hover:shadow-xl transition-all cursor-pointer"
               >
                 Comprar Agora
               </a>

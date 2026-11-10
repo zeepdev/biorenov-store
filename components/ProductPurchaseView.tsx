@@ -183,7 +183,7 @@ export function ProductPurchaseView({ product }: ProductPurchaseViewProps) {
                 </div>
 
                 {/* Product Title */}
-                <h1 className="font-serif text-2xl sm:text-3xl text-stone-900 leading-snug font-normal">
+                <h1 className="font-heading font-black text-2xl sm:text-4xl text-stone-900 leading-tight tracking-tight">
                   {product.name}
                 </h1>
 
@@ -193,18 +193,18 @@ export function ProductPurchaseView({ product }: ProductPurchaseViewProps) {
                 </p>
 
                 {/* Price Display */}
-                <div className="mt-5 p-4 rounded-xl bg-stone-50 border border-stone-200/80">
+                <div className="mt-5 p-4 rounded-2xl bg-stone-50 border border-stone-200/80">
                   <div className="flex items-baseline gap-3">
                     {product.originalPrice && (
-                      <span className="text-sm text-stone-400 line-through">
+                      <span className="text-sm text-stone-400 line-through font-semibold">
                         R$ {product.originalPrice.toFixed(2).replace(".", ",")}
                       </span>
                     )}
-                    <span className="font-serif text-3xl font-bold text-[#b4536a]">
+                    <span className="font-heading font-black text-3xl sm:text-4xl text-[#b4536a] tracking-tight">
                       R$ {product.price.toFixed(2).replace(".", ",")}
                     </span>
                     {product.originalPrice && (
-                      <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+                      <span className="text-xs font-black text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">
                         Economize R$ {(product.originalPrice - product.price).toFixed(2).replace(".", ",")}
                       </span>
                     )}
@@ -397,7 +397,7 @@ export function ProductPurchaseView({ product }: ProductPurchaseViewProps) {
                   </p>
 
                   <div>
-                    <h3 className="font-serif text-lg font-semibold text-stone-900 mb-3">
+                    <h3 className="font-heading font-black text-lg text-stone-900 mb-3 tracking-tight">
                       Principais Benefícios Comprovados:
                     </h3>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -414,7 +414,7 @@ export function ProductPurchaseView({ product }: ProductPurchaseViewProps) {
 
               {activeTab === "modoDeUso" && (
                 <div className="space-y-4 max-w-4xl text-stone-700">
-                  <h3 className="font-serif text-lg font-semibold text-stone-900">
+                  <h3 className="font-heading font-black text-lg text-stone-900 tracking-tight">
                     Protocolo de Aplicação Oficial Douglas Alan
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed">
@@ -433,7 +433,7 @@ export function ProductPurchaseView({ product }: ProductPurchaseViewProps) {
               {activeTab === "ativos" && (
                 <div className="space-y-6 max-w-4xl text-stone-700">
                   <div>
-                    <h3 className="font-serif text-lg font-semibold text-stone-900 mb-3">
+                    <h3 className="font-heading font-black text-lg text-stone-900 mb-3 tracking-tight">
                       Ativos de Alta Performance:
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -464,7 +464,7 @@ export function ProductPurchaseView({ product }: ProductPurchaseViewProps) {
 
               {activeTab === "envio" && (
                 <div className="space-y-4 max-w-4xl text-xs sm:text-sm text-stone-700 leading-relaxed">
-                  <h3 className="font-serif text-lg font-semibold text-stone-900">
+                  <h3 className="font-heading font-black text-lg text-stone-900 tracking-tight">
                     Política de Envio, Rastreio & Garantia Biorenov
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
@@ -497,7 +497,7 @@ export function ProductPurchaseView({ product }: ProductPurchaseViewProps) {
         {/* Related Products Carousel ("Você Também Pode Gostar") */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <div className="flex items-center justify-between mb-8 pb-3 border-b border-stone-200">
-            <h2 className="font-serif text-2xl sm:text-3xl text-stone-900 uppercase tracking-wider font-normal">
+            <h2 className="font-heading font-black text-2xl sm:text-3xl text-stone-900 uppercase tracking-tight">
               Você Também Pode Gostar
             </h2>
             <Link

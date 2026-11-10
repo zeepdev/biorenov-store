@@ -142,18 +142,18 @@ export function CheckoutModal() {
     <div className="fixed inset-0 z-50 overflow-y-auto bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-stone-200 overflow-hidden relative animate-fade-in my-8">
         {/* Header */}
-        <div className="bg-[#1b382b] text-white p-6 flex items-center justify-between">
+        <div className="bg-[#2b141d] text-white p-6 flex items-center justify-between">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#e5c18e] font-semibold">
-              Ambiente Seguro
+            <span className="text-[10px] uppercase tracking-widest text-pink-300 font-black">
+              Ambiente Seguro & Criptografado
             </span>
-            <h2 className="font-serif text-xl sm:text-2xl font-bold mt-0.5">
+            <h2 className="font-heading font-black text-xl sm:text-2xl mt-0.5 tracking-tight">
               Finalizar Seu Pedido
             </h2>
           </div>
           <button
             onClick={() => setIsCheckoutOpen(false)}
-            className="p-2 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+            className="p-2 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -169,14 +169,17 @@ export function CheckoutModal() {
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl font-bold text-[#1b382b]">
+                <h3 className="font-heading font-black text-2xl text-[#2b141d] tracking-tight">
                   Pedido Registrado com Sucesso!
                 </h3>
                 <p className="text-xs text-stone-500 mt-1">
                   Número do Pedido:{" "}
-                  <strong className="text-stone-800">
+                  <strong className="text-stone-900 font-mono font-black">
                     {checkoutResult.orderId || "BIO-582910"}
                   </strong>
+                </p>
+                <p className="text-[11px] text-emerald-700 bg-emerald-50 py-1.5 px-3 rounded-lg mt-2 inline-block font-medium">
+                  Notificação automática enviada para <strong>isaqueduarte07@gmail.com</strong>
                 </p>
               </div>
 
@@ -256,12 +259,22 @@ export function CheckoutModal() {
                 </div>
               )}
 
-              <button
-                onClick={handleFinish}
-                className="w-full py-3.5 rounded-xl bg-stone-900 text-white font-semibold text-xs uppercase tracking-wider hover:bg-stone-800 transition-colors"
-              >
-                Concluir e Voltar à Loja
-              </button>
+              <div className="space-y-2 pt-2">
+                <a
+                  href={`/pedido/${checkoutResult.orderId}`}
+                  className="w-full py-4 rounded-full bg-[#b4536a] hover:bg-[#9c4357] text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
+                >
+                  <span>Acompanhar Pedido em Tempo Real</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+
+                <button
+                  onClick={handleFinish}
+                  className="w-full py-3 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                >
+                  Concluir e Voltar ao Início
+                </button>
+              </div>
             </div>
           ) : (
             /* Checkout Form */
@@ -432,11 +445,11 @@ export function CheckoutModal() {
                     {shippingCost === 0 ? "GRÁTIS" : `R$ ${shippingCost.toFixed(2).replace(".", ",")}`}
                   </span>
                 </div>
-                <div className="flex justify-between text-base font-bold text-[#1b382b] pt-2 border-t border-stone-200">
+                <div className="flex justify-between text-base font-black text-[#2b141d] pt-2 border-t border-stone-200">
                   <span>Total a Pagar</span>
-                  <span>R$ {total.toFixed(2).replace(".", ",")}</span>
+                  <span className="text-[#b4536a]">R$ {total.toFixed(2).replace(".", ",")}</span>
                 </div>
-                <p className="text-[11px] text-emerald-800 font-medium text-right">
+                <p className="text-[11px] text-emerald-800 font-bold text-right">
                   Ou R$ {(total * 0.95).toFixed(2).replace(".", ",")} à vista no Pix (5% OFF)
                 </p>
               </div>
@@ -445,12 +458,12 @@ export function CheckoutModal() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-[#1b382b] hover:bg-[#142920] text-white font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all disabled:opacity-50"
+                className="w-full py-4 rounded-full bg-[#2b141d] hover:bg-[#b4536a] text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all disabled:opacity-50 cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    Gerando Pagamento Seguro...
+                    Registrando & Gerando Pagamento Seguro...
                   </>
                 ) : (
                   <>

@@ -121,6 +121,11 @@ export function Footer() {
                   Perguntas Frequentes (FAQ)
                 </a>
               </li>
+              <li>
+                <a href="/admin" className="text-pink-300 hover:text-white transition-colors font-medium">
+                  Área Administrativa (ADM)
+                </a>
+              </li>
             </ul>
           </div>
 

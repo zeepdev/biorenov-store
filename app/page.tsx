@@ -47,24 +47,27 @@ export default function Home() {
         {/* 05 Split Promo Banner (Up to 30% Off on Best Sellers) */}
         <SplitPromoBanner />
 
-        {/* 06 Best Sellers Grid (Velvetique Style) */}
+        {/* 06 Best Sellers Grid (Creamy Style) */}
         <section id="produtos" className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8 pb-3 border-b border-stone-200">
             <div>
-              <h2 className="font-serif text-2xl sm:text-3xl text-stone-900 uppercase tracking-wider font-normal">
-                Best Sellers
+              <span className="text-[11px] font-black uppercase tracking-widest text-[#b4536a] block">
+                Fórmulas Concentradas
+              </span>
+              <h2 className="font-heading font-black text-2xl sm:text-3xl text-stone-900 uppercase tracking-tight">
+                Mais Vendidos & Protocolos
               </h2>
             </div>
 
             <button
               onClick={() => setSelectedCategory("todos")}
-              className="text-xs uppercase tracking-wider font-semibold text-[#b4536a] hover:text-[#9c4357] transition-colors cursor-pointer"
+              className="text-xs uppercase tracking-wider font-black text-[#b4536a] hover:text-[#9c4357] transition-colors cursor-pointer px-3 py-1.5 rounded-full hover:bg-pink-50"
             >
-              View All
+              Ver Todos ({PRODUCTS.length})
             </button>
           </div>
 
-          {/* 4-Column Product Cards Grid (Velvetique Style) */}
+          {/* 4-Column Product Cards Grid (Creamy Style) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
