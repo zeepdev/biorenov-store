@@ -27,15 +27,15 @@ export function BannerQuote() {
             <span className="text-[11px] uppercase tracking-widest text-[#d8c39e] font-semibold">
               Círculo Biorenov
             </span>
-            <h3 className="font-serif text-3xl sm:text-4xl font-normal leading-tight">
+            <h3 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl font-normal leading-tight">
               Orientações cosmetológicas exclusivas para a sua rotina.
             </h3>
-            <p className="text-stone-300 text-xs sm:text-sm leading-relaxed max-w-md">
+            <p className="text-stone-300 text-xs sm:text-sm leading-relaxed max-w-md font-medium">
               Receba dicas de aplicação do cosmetólogo Douglas Alan, lançamentos antecipados e benefícios reservados.
             </p>
 
             {submitted ? (
-              <div className="flex items-center gap-2 p-3 bg-white/10 rounded-xl text-xs text-emerald-300">
+              <div className="flex items-center gap-2 p-3 bg-white/10 rounded-xl text-xs text-emerald-300 font-bold">
                 <Check className="w-4 h-4" />
                 <span>Pronto! Entraremos em contato com conteúdos exclusivos.</span>
               </div>
@@ -47,11 +47,11 @@ export function BannerQuote() {
                   placeholder="Seu e-mail ou WhatsApp..."
                   value={contact}
                   onChange={(e) => setContact(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-full bg-white text-[#1e2420] text-xs placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#8d5b3a]"
+                  className="flex-1 px-4 py-3 rounded-full bg-white text-[#1e2420] text-xs placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#8d5b3a] font-medium"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-full bg-[#8d5b3a] hover:bg-[#784d2f] text-white text-xs font-semibold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5"
+                  className="px-6 py-3 rounded-full bg-[#8d5b3a] hover:bg-[#784d2f] text-white text-xs font-black uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>Participar</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -60,12 +60,12 @@ export function BannerQuote() {
             )}
           </div>
 
-          {/* Right Column: Founder Quote (Verdora Style) */}
+          {/* Right Column: Founder Quote */}
           <div className="lg:col-span-6 lg:border-l lg:border-white/15 lg:pl-12 space-y-4">
-            <span className="font-serif text-5xl sm:text-6xl text-[#d8c39e] leading-none block font-light">
+            <span className="font-heading font-black text-5xl sm:text-6xl text-[#d8c39e] leading-none block">
               “
             </span>
-            <p className="font-serif text-xl sm:text-2xl text-stone-100 font-light italic leading-snug">
+            <p className="font-heading font-bold text-lg sm:text-xl text-stone-100 leading-snug">
               Cuidar da pele não é agredi-la com químicos invasivos, mas devolver ao organismo 
               os bioativos que ele reconhece biologicamente para se autorregular.
             </p>

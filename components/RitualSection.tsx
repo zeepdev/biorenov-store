@@ -46,7 +46,7 @@ export function RitualSection() {
           <span className="text-xs uppercase tracking-widest text-[#8d5b3a] font-bold">
             Simplicidade com Alta Eficácia
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#183324] font-normal mt-2">
+          <h2 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-[#183324] mt-2 tracking-tight">
             O Ritual Botânico em 3 Passos Diários
           </h2>
           <p className="text-stone-600 text-sm mt-3 leading-relaxed">
@@ -78,7 +78,7 @@ export function RitualSection() {
                     <Icon className="w-6 h-6" />
                   </div>
 
-                  <h3 className="font-serif text-xl font-bold text-[#183324] mb-1">
+                  <h3 className="font-heading font-black text-xl text-[#183324] mb-1">
                     {st.action}
                   </h3>
                   <p className="text-xs font-bold text-[#8d5b3a] uppercase tracking-wide mb-3">
@@ -99,7 +99,7 @@ export function RitualSection() {
             <span className="text-[10px] uppercase tracking-widest text-[#e5c18e] font-bold">
               Economia no Protocolo Completo
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl font-normal">
+            <h3 className="font-heading font-black text-2xl sm:text-3xl">
               Garanta o Kit Ritual Botânico com R$ 78+ de Desconto
             </h3>
             <p className="text-xs text-stone-300 max-w-xl">

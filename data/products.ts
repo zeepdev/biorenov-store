@@ -57,16 +57,15 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 194,
     tag: "240g • Purcell Win",
     category: "terapeutico",
-    image: "/produtos/aky06721.jpg",
+    image: "/produtos/goforever/dorless-creme-corporal-relaxante-muscular-240g_2.png",
     images: [
+      "/produtos/goforever/dorless-creme-corporal-relaxante-muscular-240g_2.png",
+      "/produtos/goforever/dorless-creme-corporal-relaxante-muscular-240g_1.png",
+      "/produtos/goforever/dorless-relax-creme-de-massagem-corporal-relaxante-240g_1.png",
       "/produtos/aky06721.jpg",
       "/produtos/aky06825.jpg",
       "/produtos/aky06687.jpg",
       "/produtos/aky06718.jpg",
-      "/produtos/aky06715.jpg",
-      "/produtos/aky06698.jpg",
-      "/produtos/aky06729.jpg",
-      "/produtos/aky06828.jpg",
     ],
     volume: "240 g",
     whatsappMessage:
@@ -192,8 +191,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 79,
     tag: "Toque Aveludado • Não Pesa",
     category: "solar",
-    image: "/produtos/aky06735.jpg",
+    image: "/produtos/goforever/dorless-suncare-hidratante-corporal-pre-sol-120ml.png",
     images: [
+      "/produtos/goforever/dorless-suncare-hidratante-corporal-pre-sol-120ml.png",
       "/produtos/aky06735.jpg",
       "/produtos/aky06848.jpg",
       "/produtos/aky06849.jpg",
@@ -234,8 +234,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 63,
     tag: "2 em 1 • Couro & Rosto",
     category: "capilar",
-    image: "/produtos/aky06748.jpg",
+    image: "/produtos/goforever/bio-detox-dual-sense-argila-verde-2-em-1-cabelo-e-rosto-150ml-biorenov.png",
     images: [
+      "/produtos/goforever/bio-detox-dual-sense-argila-verde-2-em-1-cabelo-e-rosto-150ml-biorenov.png",
       "/produtos/aky06748.jpg",
       "/produtos/aky06751.jpg",
     ],
@@ -274,8 +275,10 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 81,
     tag: "Anti-Rachaduras & Pernas Leves",
     category: "terapeutico",
-    image: "/produtos/aky06707.jpg",
+    image: "/produtos/goforever/dorless-pedra-pomes-creme-esfoliante-para-os-pes-240g_1.png",
     images: [
+      "/produtos/goforever/dorless-pedra-pomes-creme-esfoliante-para-os-pes-240g_1.png",
+      "/produtos/goforever/dorless-pedra-pomes-creme-esfoliante-para-os-pes-240g_2.png",
       "/produtos/aky06707.jpg",
       "/produtos/aky06708.jpg",
       "/produtos/aky06830.jpg",
@@ -357,9 +360,9 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 168,
     tag: "Ação Sem Efeito Rebote",
     category: "facial",
-    image: "/produtos/pdf_p5_img3.jpeg",
+    image: "/produtos/goforever/biolumini-creme-clareador-e-rejuvenescedor-50g-biorenov.png",
     images: [
-      "/produtos/pdf_p5_img3.jpeg",
+      "/produtos/goforever/biolumini-creme-clareador-e-rejuvenescedor-50g-biorenov.png",
       "/produtos/aky06821.jpg",
       "/produtos/aky06701.jpg",
       "/produtos/aky06819.jpg",
@@ -399,9 +402,10 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 88,
     tag: "Zero Sulfatos • Maçã & Milho",
     category: "facial",
-    image: "/produtos/pdf_p7_img3.jpeg",
+    image: "/produtos/goforever/limpeza-facial-micelar-purifique-120ml-biorenov.png",
     images: [
-      "/produtos/pdf_p7_img3.jpeg",
+      "/produtos/goforever/limpeza-facial-micelar-purifique-120ml-biorenov.png",
+      "/produtos/goforever/tonico-facial-equilibra-ph-tonifique-biorenov-120ml.png",
       "/produtos/aky06780.jpg",
     ],
     volume: "200 ml",
@@ -438,12 +442,12 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 215,
     tag: "Frete Grátis • Economia de R$ 78+",
     category: "kits",
-    image: "/produtos/aky06791.jpg",
+    image: "/produtos/goforever/biolumini-creme-clareador-e-rejuvenescedor-50g-biorenov.png",
     images: [
+      "/produtos/goforever/biolumini-creme-clareador-e-rejuvenescedor-50g-biorenov.png",
+      "/produtos/goforever/limpeza-facial-micelar-purifique-120ml-biorenov.png",
+      "/produtos/goforever/dorless-suncare-hidratante-corporal-pre-sol-120ml.png",
       "/produtos/aky06791.jpg",
-      "/produtos/aky06735.jpg",
-      "/produtos/pdf_p5_img3.jpeg",
-      "/produtos/pdf_p7_img3.jpeg",
     ],
     volume: "3 Produtos Oficiais",
     whatsappMessage:
@@ -520,10 +524,11 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 64,
     tag: "100ml • Fresh & Fragrant",
     category: "perfumaria",
-    image: "/produtos/kit_raspberry_hazelnut.jpg",
+    image: "/produtos/goforever/body-splash-bio-raspberry-100ml-biorenov.png",
     images: [
-      "/produtos/kit_raspberry_hazelnut.jpg",
+      "/produtos/goforever/body-splash-bio-raspberry-100ml-biorenov.png",
       "/banners/raspberry_hazelnut_banner.jpg",
+      "/produtos/kit_raspberry_hazelnut.jpg",
     ],
     volume: "100ml",
     whatsappMessage:
@@ -559,13 +564,133 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 52,
     tag: "30g • Toque Aveludado",
     category: "facial",
-    image: "/produtos/kit_raspberry_hazelnut.jpg",
+    image: "/produtos/goforever/body-splash-bio-raspberry-100ml-biorenov.png",
     images: [
-      "/produtos/kit_raspberry_hazelnut.jpg",
+      "/produtos/goforever/body-splash-bio-raspberry-100ml-biorenov.png",
       "/banners/raspberry_hazelnut_banner.jpg",
+      "/produtos/kit_raspberry_hazelnut.jpg",
     ],
     volume: "30g",
     whatsappMessage:
       "Olá! Quero pedir o Cremma Bacio Creme para Mãos Raspberry 30g.",
+  },
+  {
+    id: "dorless-energy-pos-treino",
+    name: "Biorenov Dorless Energy Creme Relaxante Pós-Treino 240g",
+    subtitle: "Recuperação Muscular Acelerada • Cânfora, Mentol & Arnica Montana",
+    badge: "Linha Esportiva",
+    description:
+      "Formulado especialmente para praticantes de atividade física e atletas. Promove alívio muscular imediato, descongestiona a musculatura fadigada e acelera a recuperação pós-esforço com sensação térmica refrescante revigorante.",
+    indication:
+      "Fadiga muscular pós-treino, pernas cansadas, contraturas esportivas, sobrecarga de articulações e massagem desportiva.",
+    activeIngredients: [
+      "Arnica Montana Concentrada",
+      "Cânfora Pura Farmacêutica",
+      "Mentol Refrescante Ativo",
+      "Óleo de Eucalipto Glóbulos",
+      "Tecnologia Purcell Win",
+    ],
+    benefits: [
+      "Alívio e frescor térmico imediato nos músculos sobrecarregados",
+      "Estimula a microcirculação periférica acelerando a drenagem de lactato",
+      "Absorção ultrarrápida sem engordurar a pele ou manchar uniformes",
+      "Frasco ergonômico de 240g de alta durabilidade e rendimento",
+    ],
+    howToUse:
+      "Aplique uma porção generosa sobre a musculatura exigida após o treino ou competição. Massageie vigorosamente até completa absorção.",
+    compositionInfo:
+      "Aqua, Arnica Montana Extract, Camphor, Menthol, Eucalyptus Globulus Leaf Oil, Purcell Win Bio-Lipids, Glycerin.",
+    price: 89.9,
+    originalPrice: 109.0,
+    rating: 5.0,
+    reviewsCount: 76,
+    tag: "Pós-Treino • Recuperação Rápida",
+    category: "terapeutico",
+    image: "/produtos/goforever/dorless-energy-creme-corporal-relaxante-pos-treino-240g_1.png",
+    images: [
+      "/produtos/goforever/dorless-energy-creme-corporal-relaxante-pos-treino-240g_1.png",
+      "/produtos/goforever/dorless-energy-creme-corporal-relaxante-pos-treino-240g_2.png",
+    ],
+    volume: "240 g",
+    whatsappMessage:
+      "Olá! Gostaria de pedir o Dorless Energy Creme Corporal Pós-Treino 240g.",
+  },
+  {
+    id: "dorless-collagen-oleo",
+    name: "Biorenov Dorless Collagen Óleo Corporal de Tratamento 150ml",
+    subtitle: "Restauração da Elasticidade • Colágeno Hidrolisado & Óleos Amazônicos",
+    badge: "Alta Nutrição",
+    description:
+      "Óleo corporal terapêutico e firmador enriquecido com Colágeno e bio-óleos nobres. Devolve a elasticidade natural da pele, previne o ressecamento profundo e proporciona toque acetinado sem sensação pegajosa.",
+    indication:
+      "Prevenção de ressecamento, flacidez corporal, estrias, perda de viço dérmico e hidratação intensa pós-banho.",
+    activeIngredients: [
+      "Colágeno Hidrolisado Lipossomado",
+      "Óleo Puro de Amêndoas Doces",
+      "Extrato Botânico de Copaíba",
+      "Vitamina E Antioxidante",
+    ],
+    benefits: [
+      "Melhora perceptível da firmeza e elasticidade da pele",
+      "Toque seco acetinado de rápida penetração dérmica",
+      "Hidratação de longa duração com barreira lipídica reforçada",
+      "Ideal para massagem relaxante ou hidratação pós-banho",
+    ],
+    howToUse:
+      "Aplique sobre o corpo úmido ou seco após o banho, espalhando suavemente com movimentos circulares.",
+    compositionInfo:
+      "Paraffinum Liquidum, Prunus Amygdalus Dulcis Oil, Hydrolyzed Collagen, Copaifera Officinalis Resin, Tocopheryl Acetate, Parfum.",
+    price: 98.0,
+    originalPrice: 119.0,
+    rating: 4.9,
+    reviewsCount: 54,
+    tag: "Colágeno & Firmeza • 150ml",
+    category: "terapeutico",
+    image: "/produtos/goforever/dorless-collagen-oleo-corporal-de-tratamento-150ml.png",
+    images: [
+      "/produtos/goforever/dorless-collagen-oleo-corporal-de-tratamento-150ml.png",
+    ],
+    volume: "150 ml",
+    whatsappMessage:
+      "Olá! Gostaria de encomendar o Dorless Collagen Óleo Corporal 150ml da Biorenov.",
+  },
+  {
+    id: "tonifique-tonico-facial",
+    name: "Biorenov Tonifique Tônico Facial Equilibra pH 120ml",
+    subtitle: "Equilíbrio da Flora Cutânea • Prebióticos Botânicos • Poros Refinados",
+    badge: "Equilíbrio Facial",
+    description:
+      "Tônico facial equilibrador formulado com prebióticos e extratos botânicos calmantes. Restaura imediatamente o pH fisiológico da pele após a limpeza, fecha os poros dilatados e prepara a pele para máxima absorção dos tratamentos faciais.",
+    indication:
+      "Todos os tipos de pele, especialmente peles mistas, oleosas ou desequilibradas pós-limpeza.",
+    activeIngredients: [
+      "Prebióticos Restauradores de Barreira",
+      "Extrato de Hamamélis Adstringente",
+      "Camomila Calmante",
+      "Niacinamida Pura",
+    ],
+    benefits: [
+      "Restaura o pH fisiológico instantaneamente",
+      "Refina a textura dos poros sem repuxar ou ressecar",
+      "Ação calmante e anti-inflamatória botânica",
+      "Livre de álcool agressivo, parabenos e corantes artificiais",
+    ],
+    howToUse:
+      "Após a higienização facial com a Purifique Água Micelar, borrife o tônico diretamente no rosto ou aplique com um disco de algodão. Deixe secar naturalmente.",
+    compositionInfo:
+      "Aqua, Hamamelis Virginiana Water, Chamomilla Recutita Extract, Inulin, Niacinamide, Glycerin, Phenoxyethanol.",
+    price: 84.9,
+    originalPrice: 99.0,
+    rating: 5.0,
+    reviewsCount: 43,
+    tag: "Equilibra pH • 120ml",
+    category: "facial",
+    image: "/produtos/goforever/tonico-facial-equilibra-ph-tonifique-biorenov-120ml.png",
+    images: [
+      "/produtos/goforever/tonico-facial-equilibra-ph-tonifique-biorenov-120ml.png",
+    ],
+    volume: "120 ml",
+    whatsappMessage:
+      "Olá! Gostaria de comprar o Biorenov Tonifique Tônico Facial Equilibra pH 120ml.",
   },
 ];

@@ -47,7 +47,7 @@ export function CartDrawer() {
           <div className="p-5 border-b border-stone-200 flex items-center justify-between bg-white">
             <div className="flex items-center gap-2">
               <ShoppingBag className="w-5 h-5 text-[#1b382b]" />
-              <h2 className="font-serif text-lg font-bold text-stone-900">
+              <h2 className="font-heading font-black text-lg text-stone-900 tracking-tight">
                 Seu Carrinho
               </h2>
               <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-stone-100 text-stone-700">
@@ -93,7 +93,7 @@ export function CartDrawer() {
                 <div className="w-16 h-16 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 mb-4">
                   <ShoppingBag className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-stone-800 mb-1">
+                <h3 className="font-heading font-black text-lg text-stone-800 mb-1 tracking-tight">
                   Seu carrinho está vazio
                 </h3>
                 <p className="text-xs text-stone-500 mb-6 max-w-xs">

@@ -14,7 +14,7 @@ export function SplitPromoBanner() {
             Oferta por Tempo Limitado
           </span>
 
-          <h3 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-normal leading-[1.12]">
+          <h3 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl leading-[1.12] tracking-tight">
             Até 30% OFF <br />
             nos Mais Vendidos
           </h3>

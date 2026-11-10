@@ -30,7 +30,7 @@ export function MicrobiomeSection() {
               O Pilar Científico Biorenov
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#183324] font-normal leading-tight">
+            <h2 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-[#183324] leading-tight tracking-tight">
               Por que a biotecnologia probiótica é o futuro da estética?
             </h2>
 
@@ -69,7 +69,7 @@ export function MicrobiomeSection() {
                   <span className="text-[10px] uppercase tracking-widest font-bold text-[#8d5b3a]">
                     {item.tag}
                   </span>
-                  <h3 className="font-serif text-base font-bold text-[#183324] mt-1 mb-2">
+                  <h3 className="font-heading font-bold text-base text-[#183324] mt-1 mb-2">
                     {item.title}
                   </h3>
                 </div>

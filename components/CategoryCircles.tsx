@@ -12,32 +12,32 @@ export function CategoryCircles({ onSelectCategory, selectedCategory }: Category
     {
       id: "facial",
       label: "SKINCARE",
-      image: "/categorias/cat_facial.jpg",
+      image: "/produtos/goforever/biolumini-creme-clareador-e-rejuvenescedor-50g-biorenov.png",
     },
     {
       id: "terapeutico",
       label: "ALÍVIO MUSCULAR",
-      image: "/categorias/cat_terapeutico.jpg",
+      image: "/produtos/goforever/dorless-creme-corporal-relaxante-muscular-240g_2.png",
     },
     {
       id: "capilar",
       label: "CUIDADOS CAPILARES",
-      image: "/categorias/cat_capilar.jpg",
+      image: "/produtos/goforever/bio-detox-dual-sense-argila-verde-2-em-1-cabelo-e-rosto-150ml-biorenov.png",
     },
     {
       id: "perfumaria",
       label: "PERFUMARIA BOTÂNICA",
-      image: "/categorias/cat_perfumaria.jpg",
+      image: "/produtos/goforever/body-splash-bio-raspberry-100ml-biorenov.png",
     },
     {
       id: "solar",
       label: "PROTEÇÃO SOLAR",
-      image: "/categorias/cat_solar.jpg",
+      image: "/produtos/goforever/dorless-suncare-hidratante-corporal-pre-sol-120ml.png",
     },
     {
       id: "kits",
       label: "KITS DE TRATAMENTO",
-      image: "/categorias/cat_kits.jpg",
+      image: "/produtos/goforever/dorless-pedra-pomes-creme-esfoliante-para-os-pes-240g_1.png",
     },
   ];
 
@@ -54,7 +54,7 @@ export function CategoryCircles({ onSelectCategory, selectedCategory }: Category
         <div className="w-14 h-1 bg-[#b4536a] mx-auto mt-3 rounded-full" />
       </div>
 
-      {/* 6 Circular Category Pods (Fills edge-to-edge with no inner squares) */}
+      {/* 6 Circular Category Pods (Clean floating bottles inside pastel circle) */}
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-5 sm:gap-6 justify-items-center">
         {categories.map((cat, idx) => {
           const isSelected = selectedCategory === cat.id;
@@ -68,25 +68,25 @@ export function CategoryCircles({ onSelectCategory, selectedCategory }: Category
               }}
               className="flex flex-col items-center group cursor-pointer text-center w-full max-w-[140px]"
             >
-              {/* Perfect Velvetique Circle: edge-to-edge photo fill */}
+              {/* Perfect Creamy Circle: pastel background with floating packshot */}
               <div
-                className={`relative aspect-square w-24 sm:w-32 md:w-36 rounded-full overflow-hidden shadow-xs border transition-all duration-300 ${
+                className={`relative aspect-square w-24 sm:w-28 md:w-32 rounded-full overflow-hidden transition-all duration-300 flex items-center justify-center p-3 sm:p-4 ${
                   isSelected
-                    ? "border-[#b4536a] ring-3 ring-[#b4536a] ring-offset-2 scale-105 shadow-md"
-                    : "border-stone-200/90 hover:border-[#b4536a]/50 group-hover:scale-105 group-hover:shadow-md"
+                    ? "bg-pink-100/80 border-2 border-[#b4536a] ring-3 ring-[#b4536a]/30 scale-105 shadow-md"
+                    : "bg-[#fcf8f6] border border-stone-200/90 hover:border-[#b4536a]/50 hover:bg-pink-50/40 group-hover:scale-105 group-hover:shadow-md"
                 }`}
               >
                 <img
                   src={cat.image}
                   alt={cat.label}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-sm"
                   loading="lazy"
                 />
               </div>
 
               {/* Category Label */}
               <span
-                className={`text-[10px] sm:text-xs mt-3 font-semibold uppercase tracking-wider transition-colors line-clamp-1 ${
+                className={`text-[10px] sm:text-xs mt-3 font-heading font-bold uppercase tracking-wider transition-colors line-clamp-1 ${
                   isSelected ? "text-[#b4536a]" : "text-stone-700 group-hover:text-[#b4536a]"
                 }`}
               >

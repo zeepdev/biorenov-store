@@ -39,7 +39,7 @@ export function ReviewsSection() {
           <span className="text-xs uppercase tracking-widest text-[#8d5b3a] font-bold">
             Comprovação de Quem Vive a Rotina
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-normal text-[#183324] mt-2">
+          <h2 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-[#183324] mt-2 tracking-tight">
             Resultados Reais & Experiências Verificadas
           </h2>
           <p className="text-stone-600 text-sm mt-3">

@@ -34,7 +34,7 @@ export function ScienceSection() {
             <span className="text-xs uppercase tracking-widest text-[#8e6840] font-bold">
               Biotecnologia Biorenov
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#1b382b] font-normal leading-tight">
+            <h2 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-[#1b382b] leading-tight tracking-tight">
               A ciência por trás da renovação da sua pele.
             </h2>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -74,7 +74,7 @@ export function ScienceSection() {
                     <span className="text-[10px] uppercase tracking-wider font-bold text-[#8e6840]">
                       {pillar.tag}
                     </span>
-                    <h3 className="font-serif text-base font-bold text-stone-900 mt-1 mb-2">
+                    <h3 className="font-heading font-bold text-base text-stone-900 mt-1 mb-2">
                       {pillar.title}
                     </h3>
                   </div>

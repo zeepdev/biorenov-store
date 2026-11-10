@@ -173,7 +173,7 @@ export function Hero() {
                   <Link href="/produto/biolumini-uniformizador" className="flex flex-col items-center group cursor-pointer">
                     <div className="relative aspect-square w-full rounded-2xl bg-white/80 p-3 sm:p-4 shadow-sm border border-pink-100 flex items-center justify-center hover:scale-105 transition-transform">
                       <img
-                        src="/produtos/pdf_p5_img3.jpeg"
+                        src="/produtos/goforever/biolumini-creme-clareador-e-rejuvenescedor-50g-biorenov.png"
                         alt="Biolumini Probiótico"
                         className="max-h-36 sm:max-h-52 w-auto object-contain drop-shadow-md"
                       />
@@ -187,7 +187,7 @@ export function Hero() {
                   <Link href="/produto/dorless-terapeutico" className="flex flex-col items-center group -mt-6 cursor-pointer">
                     <div className="relative aspect-square w-full rounded-2xl bg-white/95 p-3 sm:p-4 shadow-md border border-pink-200 flex items-center justify-center hover:scale-105 transition-transform">
                       <img
-                        src="/produtos/aky06721.jpg"
+                        src="/produtos/goforever/dorless-creme-corporal-relaxante-muscular-240g_2.png"
                         alt="Dorless 240g"
                         className="max-h-44 sm:max-h-64 w-auto object-contain drop-shadow-lg"
                       />

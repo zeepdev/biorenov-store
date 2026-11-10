@@ -24,26 +24,26 @@ export function BioluminiDeepDive() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 text-xs text-[#1e2420]">
-                <span className="font-serif font-semibold text-sm block mb-0.5">
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 text-xs text-[#1e2420]">
+                <span className="font-heading font-bold text-sm block mb-0.5">
                   Fórmula Biotecnológica Probiótica
                 </span>
-                <span className="text-[#5f6761]">
+                <span className="text-[#5f6761] font-medium">
                   Clareamento seguro sem descamação severa e sem efeito rebote.
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Editorial Copy (Lunara "The Double Cleanse" Style) */}
+          {/* Right Column: Editorial Copy */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="text-xs uppercase tracking-widest text-[#8d5b3a] font-semibold">
+            <div className="text-xs uppercase tracking-widest text-[#8d5b3a] font-bold">
               O Protocolo em Destaque
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl text-[#1e2420] font-normal leading-[1.15] tracking-tight">
+            <h2 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#1e2420] leading-[1.12] tracking-tight">
               Clareamento inteligente. <br />
-              <span className="italic font-serif font-light text-[#2d4734]">
+              <span className="text-[#b4536a]">
                 Sem efeito rebote.
               </span>
             </h2>

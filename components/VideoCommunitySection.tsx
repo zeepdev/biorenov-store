@@ -178,8 +178,8 @@ export function VideoCommunitySection() {
                 Vídeos & Reviews Reais
               </span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl text-stone-900 font-normal leading-tight">
-              Quem Usa, <span className="italic font-normal">Ama.</span>
+            <h2 className="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-stone-900 leading-tight tracking-tight">
+              Quem Usa, <span className="text-[#b4536a]">Ama.</span>
             </h2>
             <p className="text-stone-600 text-xs sm:text-sm mt-2 max-w-lg">
               Veja criadores, clientes e especialistas testando as fórmulas de Douglas Alan na pele e nos fios.
